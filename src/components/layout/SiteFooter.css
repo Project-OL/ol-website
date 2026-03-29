@@ -1,0 +1,309 @@
+/* Site footer — 1440×1024 Figma frame; positions as % of --page-w / --page-h */
+
+.site-footer {
+  /* background: #ffffff; */
+  /* min-height: calc(var(--page-h) * 1px); */
+  /* margin-top: -40px;
+  padding-top: 40px; */
+  box-sizing: border-box;
+}
+
+.site-footer.page-section--surface {
+  background: #ffffff;
+}
+
+.site-footer__canvas {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 40px);
+  box-sizing: border-box;
+  background: #ffffff;
+  /* “Download App” vertical rhythm vs headline / stores (2× lh above, 1× lh below) */
+  --footer-download-lh: 26px;
+  --footer-gap-download-after-headline: calc(2 * var(--footer-download-lh));
+  --footer-gap-stores-after-download: calc(1 * var(--footer-download-lh));
+}
+
+/* Go live… — 358×~220 @ 43,125.43 (design: Stream Live. Meet. Interact.) */
+.site-footer__headline {
+  position: absolute;
+  left: calc(43 / var(--page-w) * 100%);
+  top: calc(125.43 / var(--page-h) * 100%);
+  width: calc(358 / var(--page-w) * 100%);
+  max-width: 358px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: -1.6px;
+  color: #1b181c;
+}
+
+.site-footer__headline-line {
+  display: block;
+}
+
+/* Download App — below headline: 2× label line-height; above stores: 1× label line-height */
+.site-footer__download-label {
+  position: absolute;
+  left: calc(44 / var(--page-w) * 100%);
+  top: calc(
+    125.43 / var(--page-h) * 100% + 3 * 70px + var(--footer-gap-download-after-headline)
+  );
+  width: 130px;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: var(--footer-download-lh);
+  color: #6b6d6f;
+}
+
+/* Store row — 12px gaps; top = headline stack + download row + gap below label */
+.site-footer__stores {
+  position: absolute;
+  left: calc(43 / var(--page-w) * 100%);
+  top: calc(
+    125.43 / var(--page-h) * 100% + 3 * 70px + var(--footer-gap-download-after-headline) +
+      var(--footer-download-lh) + var(--footer-gap-stores-after-download)
+  );
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-footer__store {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 45.02px;
+  padding: 0 12px;
+  background: #333333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  color: #e9e9e9;
+}
+
+.site-footer__store--apple {
+  /* width: 106px; */
+  min-width: 106px;
+  padding: 0 10px;
+}
+
+.site-footer__store--google {
+  /* width: 120px; */
+  min-width: 120px;
+  border: 1px solid rgba(233, 233, 233, 0.1);
+  color: #ffffff;
+}
+
+.site-footer__store--android {
+  /* width: 97px; */
+  min-width: 97px;
+}
+
+.site-footer__store--google .site-footer__store-icon {
+  color: #e9e9e9;
+}
+
+.site-footer__store-icon {
+  flex-shrink: 0;
+  color: #f9f9f9;
+}
+
+.site-footer__store:hover {
+  filter: brightness(1.12);
+}
+
+.site-footer__store:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Security column @ 955 */
+.site-footer__col--security {
+  position: absolute;
+  left: calc(955 / var(--page-w) * 100%);
+  top: calc(187.21 / var(--page-h) * 100%);
+  width: 210px;
+}
+
+.site-footer__col--security .site-footer__col-title {
+  margin: 0 0 26px;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #8a8a8a;
+}
+
+/* Help @ 1236 */
+.site-footer__col--help {
+  position: absolute;
+  left: calc(1236 / var(--page-w) * 100%);
+  top: calc(186.16 / var(--page-h) * 100%);
+  width: 160px;
+}
+
+.site-footer__col-title--help {
+  margin: 0 0 26px;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 38px;
+  color: #8a8a8a;
+}
+
+.site-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer__links li + li {
+  margin-top: 42.92px;
+}
+
+.site-footer__link {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-decoration: none;
+}
+
+.site-footer__link--muted {
+  color: #4a4b4c;
+}
+
+.site-footer__link:hover {
+  text-decoration: underline;
+}
+
+/* Social @ 1280,808.1 */
+.site-footer__social {
+  position: absolute;
+  left: calc(1280 / var(--page-w) * 100%);
+  top: calc(808.1 / var(--page-h) * 100%);
+  display: flex;
+  gap: 16px;
+}
+
+.site-footer__social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 33.51px;
+  background: #333333;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+.site-footer__social-btn:hover {
+  filter: brightness(1.15);
+}
+
+.site-footer__social-btn:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Legal @ 27,931.65 */
+.site-footer__legal {
+  position: absolute;
+  left: calc(27 / var(--page-w) * 100%);
+  /* top: calc(931.65 / var(--page-h) * 100%); */
+  bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 6px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #8a8a8a;
+}
+
+.site-footer__legal-sep {
+  color: #8a8a8a;
+  user-select: none;
+}
+
+.site-footer__email {
+  color: #8a8a8a;
+  text-decoration: none;
+}
+
+.site-footer__email:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .site-footer {
+    margin-top: 0;
+    padding-top: 0;
+    min-height: auto;
+  }
+
+  .site-footer__canvas {
+    min-height: auto;
+    padding: 3rem 5% 5.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .site-footer__headline,
+  .site-footer__download-label,
+  .site-footer__stores,
+  .site-footer__col--security,
+  .site-footer__col--help,
+  .site-footer__social,
+  .site-footer__legal {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: none;
+  }
+
+  .site-footer__headline {
+    font-size: clamp(40px, 10vw, 64px);
+    line-height: 1.1;
+    /* Net space to “Download App” = 2× download line-height (parent flex gap is offset) */
+    margin-bottom: calc(var(--footer-gap-download-after-headline) - 2.5rem);
+  }
+
+  .site-footer__download-label {
+    /* Net space to store row = 1× download line-height */
+    margin-bottom: calc(var(--footer-gap-stores-after-download) - 2.5rem);
+  }
+
+  .site-footer__stores {
+    justify-content: flex-start;
+  }
+
+  .site-footer__col--security,
+  .site-footer__col--help {
+    position: relative;
+  }
+}

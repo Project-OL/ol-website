@@ -1,0 +1,203 @@
+{
+  "brand": {
+    "name": "Offoo LIVE"
+  },
+  "nav": {
+    "homepage": "الصفحة الرئيسية",
+    "contactUs": "اتصل بنا",
+    "cooperation": "التعاون",
+    "updates": "التحديثات",
+    "policies": "السياسات"
+  },
+  "header": {
+    "primaryNavAria": "التنقل الرئيسي",
+    "langButtonAria": "اختر اللغة",
+    "langMenuAria": "اللغات المتاحة",
+    "policiesMenuAria": "السياسات والوثائق القانونية",
+    "currentLanguageFallback": "اللغة"
+  },
+  "hero": {
+    "ariaSection": "قسم البطل الرئيسي Offoo Live",
+    "ariaBg": "مشهد مدينة نيون",
+    "tagline": "عِشْ فوق الحدود،\nاصنع روابط حقيقية"
+  },
+  "vblock": {
+    "rec": "تسجيل",
+    "live": "مباشر",
+    "toFriends": "للأصدقاء"
+  },
+  "value": {
+    "title": "كل بث يخلق تواصلاً ذا معنى",
+    "lede": "من التعارف البسيط إلى التجارب المشتركة، تحوّل Offoolive البث المباشر إلى فضاء للتفاعل الحقيقي والمجتمع.",
+    "storeAppStore": "App Store",
+    "storeGooglePlay": "Google Play",
+    "storeAndroid": "أندرويد",
+    "ariaAppStore": "التنزيل من App Store",
+    "ariaGooglePlay": "التنزيل من Google Play",
+    "ariaAndroid": "تنزيل لأندرويد",
+    "colLiveTitle": "تفاعل مباشر",
+    "colLiveBody": "اكتشف المبدعين، انضم إلى الجلسات المباشرة، وتحدث في الوقت الفعلي ليقترب الجمهور والمضيفون.",
+    "colGiftsTitle": "هدايا رقمية",
+    "colGiftsBody": "ادعم المبدعين بهدايا افتراضية تفاعلية لتعزيز المشاركة والاحتفال بلحظات مباشرة لا تُنسى.",
+    "colSubTitle": "اشتراك ووصول مميز",
+    "colSubBody": "افتح ميزات حصرية مع اشتراكات Offoolive: محتوى مميز، تفاعل أولوية مع المضيفين، وامتيازات للمستخدمين المخلصين."
+  },
+  "pk": {
+    "line1": "معارك PK",
+    "line2": "منافسة لحظية، إثارة حقيقية",
+    "body": "يتيح وضع PK للمبدعين منافسة في بث مباشر، مع تفاعل أوسع ومشاركة جمهور وتجربة أكثر حيوية.",
+    "altImage": "وضع معركة PK على الجوال، مبدعان وتأثيرات طاقة"
+  },
+  "talent": {
+    "line1": "أظهر موهبتك",
+    "line2": "كل هدية تدعم البث",
+    "p1": "انطلق مباشرة وأظهر مواهبك الفريدة لجمهور عالمي على Offoolive.",
+    "p2": "تفاعل مع المشاهدين في الوقت الفعلي وابنِ مجتمعاً من الداعمين.",
+    "p3": "كل هدية من المعجبين تعزز بثك وتحول الإبداع إلى مكافآت حقيقية.",
+    "p4": "نمِ نفوذك، تواصل مع الناس، واجعل كل لحظة مباشرة تُحسب.",
+    "altImage": "بث Offoolive على الهاتف: عازف، هدايا، دردشة، عناصر تحكم"
+  },
+  "premium": {
+    "line1": "افتح الوصول المميز",
+    "line2": "اشتراكات شهرية لمضيفيك المفضلين",
+    "bodyBeforeBreak": "استمتع بمحتوى حصري ومزايا خاصة",
+    "bodyAfterBreak": "بالاشتراك في مضيفيك المفضلين.",
+    "altImage": "اشتراك Offoolive المميز على الجوال مع زر الاشتراك"
+  },
+  "footer": {
+    "headline1": "بث مباشر.",
+    "headline2": "تعرّف.",
+    "headline3": "تفاعل.",
+    "downloadApp": "نزّل التطبيق",
+    "storeAppStore": "App Store",
+    "storeGooglePlay": "Google Play",
+    "storeAndroid": "أندرويد",
+    "ariaAppStore": "التنزيل من App Store",
+    "ariaGooglePlay": "التنزيل من Google Play",
+    "ariaAndroid": "تنزيل لأندرويد",
+    "navSecurity": "الأمان",
+    "navHelp": "المساعدة",
+    "linkPrivacy": "سياسة الخصوصية",
+    "linkTerms": "شروط الخدمة",
+    "linkHost": "اتفاقية المضيف",
+    "linkRecharge": "اتفاقية الشحن",
+    "linkChild": "سياسة حماية الأطفال",
+    "linkContact": "اتصل بنا",
+    "linkUpdates": "التحديثات",
+    "linkBusiness": "تعاون تجاري",
+    "ariaFacebook": "Offoo Live على فيسبوك",
+    "ariaInstagram": "Offoo Live على إنستغرام",
+    "copyright": "© 2026 Offoo Live. جميع الحقوق محفوظة.",
+    "legalContactEmail": "offoolive@gmail.com",
+    "legalContactEmailAria": "بريد Offoo Live: offoolive@gmail.com"
+  },
+  "meta": {
+    "title": "Offoo LIVE"
+  },
+  "privacyPolicy": {
+    "ariaMain": "سياسة الخصوصية Offoo Live"
+  },
+  "termsOfService": {
+    "ariaMain": "شروط الخدمة Offoo Live"
+  },
+  "hostAgreement": {
+    "ariaMain": "سياسة المضيف وقواعد المنصة Offoo Live"
+  },
+  "coinRechargePolicy": {
+    "ariaMain": "سياسة شحن العملات والعملة الافتراضية Offoo Live"
+  },
+  "childSafetyPolicy": {
+    "ariaMain": "سياسة سلامة وحماية الأطفال Offoo Live"
+  },
+  "contact": {
+    "ariaMain": "تواصل مع Offoo Live",
+    "heroTitle": "تواصل معنا",
+    "heroSubtitle": "بناء روابط، دعم المبدعين، والتعاون مع الشركاء في مجتمع البث المباشر العالمي.",
+    "btnCollaborate": "تعاون معنا",
+    "btnSupport": "احصل على الدعم",
+    "exploreTitle": "استكشف مستقبل التواصل الاجتماعي المباشر",
+    "journeyTitle": "حيث تبدأ رحلتنا",
+    "journeyBody": "Offoolive منصة اجتماعية مباشرة من الجيل التالي تربط المبدعين والجمهور من خلال التفاعل في الوقت الفعلي. تتيح للناس مشاركة التجارب وبناء المجتمعات واكتشاف أشكال جديدة من الترفيه الرقمي.",
+    "missionTitle": "مهمتنا",
+    "missionBody": "ربط المبدعين والجمهور من خلال تفاعلات مباشرة ذات معنى، وتوفير منصة تزدهر فيها الإبداع والترفيه ومشاركة المجتمع.",
+    "visionTitle": "رؤيتنا",
+    "visionBody": "بناء نظام بيئي عالمي موثوق للبث المباشر يمكن للناس فيه التعبير عن أنفسهم ومشاركة التجارب وتكوين مجتمعات رقمية أصيلة.",
+    "assistanceTitle": "هل تحتاج إلى مساعدة؟",
+    "assistanceIntro": "إذا واجهت مشكلات في حسابك، اتبع هذه الخطوات:",
+    "step1Title": "افتح تطبيق Offoolive",
+    "step1Body": "سجّل الدخول إلى حسابك على Offoolive.",
+    "step2Title": "انتقل إلى الملف الشخصي ← مركز الدعم",
+    "step2Body": "افتح قسم المساعدة داخل التطبيق.",
+    "step3Title": "أرسل طلب دعم",
+    "step3Body": "أرسل مشكلتك عبر نظام الدعم وسيساعدك فريقنا.",
+    "partnerTitle": "شاركنا الشراكة",
+    "partnerLede": "نرحب بالتعاون مع الشركات والوكالات والشركاء المهتمين بالعمل مع منصة Offoolive.",
+    "partnerSub": "شراكات الأعمال",
+    "partnerHint": "للاستفسارات حول الإعلان أو الشراكات أو التعاون الاستراتيجي:",
+    "contactBlockTitle": "اتصل بنا",
+    "otherTitle": "استفسارات أخرى",
+    "otherHint": "للأسئلة العامة أو مشكلات المنصة أو طلبات دعم إضافية:",
+    "stepNumber1": "01.",
+    "stepNumber2": "02.",
+    "stepNumber3": "03.",
+    "emailBusinessAria": "بريد الشراكات التجارية: business@offoolive.com",
+    "emailSupportAria": "بريد الدعم: support@offoolive.com"
+  },
+  "cooperation": {
+    "ariaMain": "برنامج الوكلاء والتعاون Offoo Live",
+    "heroTitle": "برنامج الوكلاء",
+    "intro": "ابنِ فريقك، ادعم المبدعين، وزد أرباحك من خلال برنامج وكالة Offoolive.",
+    "becomeTitle": "كن وكيل Offoolive",
+    "becomeTagline": "ابنِ فريقك. زد أرباحك.",
+    "becomeBody": "كن قائد وكالة على Offoolive وابنِ شبكتك الخاصة من المبدعين. ادعم المضيفين، نمِّ مجتمعك، واكسب عمولات وفق أداء وكالتك.",
+    "stepsTitle": "كيف تصبح وكيلاً",
+    "stepsIntro": "اتبع هذه الخطوات البسيطة للانضمام إلى برنامج وكالة Offoolive.",
+    "agentStep1Title": "تنزيل Offoolive",
+    "agentStep1Body": "ثبّت تطبيق Offoolive وأنشئ حسابك.",
+    "agentStep2Title": "أنشئ حسابك",
+    "agentStep2Body": "سجّل وأكمل ملفك الشخصي على المنصة.",
+    "agentStep3Title": "انسخ معرف المستخدم",
+    "agentStep3Body": "اعثر على معرف Offoolive الفريد وانسخه.",
+    "agentStep4Title": "قدّم طلب الوكيل",
+    "agentStep4Body": "عبئ نموذج طلب الوكيل باستخدام معرف المنصة.",
+    "agentStep5Title": "احصل على الموافقة",
+    "agentStep5Body": "بعد الموافقة، ابدأ ببناء وإدارة وكالتك.",
+    "aboutTitle": "عن الوكالة",
+    "whatIsTitle": "ما هي الوكالة",
+    "whatIsBody": "وكالة Offoolive هي شبكة مبدعين يديرها وكيل يجند ويوجه ويدعم مضيفي البث المباشر. تساعد الوكلاء المضيفين على جذب الجمهور وتحسين جودة المحتوى والمشاركة في أنشطة المنصة. تلعب الوكالات دوراً مهماً في بناء مجتمعات نشطة وتجارب بث عالية الجودة.",
+    "respTitle": "مسؤوليات الوكيل",
+    "respIntro": "يلعب الوكلاء دوراً رئيسياً في تطوير مجتمع مبدعي Offoolive.",
+    "respIntro2": "مسؤوليات الوكيل:",
+    "resp1": "جذب ودمج مضيفين جدد",
+    "resp2": "توجيه المضيفين لتحسين المحتوى والتفاعل",
+    "resp3": "مساعدة المضيفين على فهم قواعد المنصة والفعاليات",
+    "resp4": "بناء وإدارة مجتمع مبدعين نشط",
+    "commissionTitle": "هيكل عمولة الوكالة",
+    "commissionBody": "يكسب الوكلاء عمولات وفق أداء فريقهم.",
+    "commissionRange": "نطاق العمولة: 4٪ - 24٪",
+    "rewardsTitle": "يكافئ هذا الهيكل الوكلاء الذين ينمون فرقاً قوية ويدعمون أداء المضيفين.",
+    "rewardsSubTitle": "مكافآت إضافية للوكلاء",
+    "rewardsIntro": "قد يحصل الوكلاء على مكافآت إضافية وفق الأداء، مثل:",
+    "rewards1": "مكافأة دعوة المضيف",
+    "rewards2": "مكافآت دعوة الوكيل",
+    "rewards3": "مكافآت أداء الوكالة",
+    "rewards4": "مكافآت التصنيف",
+    "rewards5": "حوافز حملات خاصة على المنصة",
+    "growthTitle": "برنامج نمو الوكلاء",
+    "growthIntro": "يوفر Offoolive نظام نمو منظماً لمساعدة الوكلاء على توسيع وكالاتهم وتعزيز القيادة داخل المنصة.",
+    "growthIntro2": "يحصل الوكلاء على:",
+    "growth1": "أدوات إدارة الوكالة",
+    "growth2": "لوحات تتبع الأداء",
+    "growth3": "فعاليات شاملة على المنصة",
+    "growth4": "فرص لتنمية شبكات مبدعين كبيرة",
+    "joinTitle": "انضم إلى شبكة Offoolive",
+    "joinTagline": "كن وكيل Offoolive اليوم",
+    "joinBody": "ابدأ ببناء شبكة المبدعين، ادعم المضيفين الموهوبين، ونفّذ تأثيرك داخل مجتمع Offoolive.",
+    "ctaApply": "التقدم لوكالة",
+    "disclaimerTitle": "إخلاء مسؤولية",
+    "disclaimer1": "الأرباح مبنية على الأداء وقد تختلف بين الأفراد.",
+    "disclaimer2": "يشارك الوكلاء والمضيفون كمستخدمين مستقلين للمنصة.",
+    "disclaimer3": "جميع البرامج تخضع لسياسات منصة Offoolive والقوانين واللوائح المحلية المعمول بها.",
+    "ctaMailSubject": "طلب وكالة"
+  }
+}

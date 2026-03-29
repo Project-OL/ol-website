@@ -1,0 +1,78 @@
+/**
+ * Reusable page shell + bottom-left color swatches (1440×1024 design reference).
+ * Use on any section: add .page-section .page-section--surface, inner .page-bg-blobs + blobs, content in .page-section__content.
+ */
+.page-section {
+  --page-w: 1440;
+  --page-h: 1024;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.page-section--surface {
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  box-shadow: 0 3px 6px rgba(18, 15, 40, 0.12);
+}
+
+.page-section__content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-bg-blobs {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.page-bg-blob {
+  position: absolute;
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+/* Amber — 400×400 @ left 35.59, top 664.11, r 200 (filter blur glow) */
+.page-bg-blob--amber {
+  width: 400px;
+  height: 400px;
+  left: calc(35.59 / var(--page-w) * 100%);
+  top: calc(664.11 / var(--page-h) * 100%);
+  border-radius: 200px;
+  background: rgba(251, 191, 36, 0.25);
+  filter: blur(100px);
+  
+}
+
+/* Coral — 500×300 @ left 360, top 860, r 150 */
+.page-bg-blob--coral {
+  width: 500px;
+  height: 300px;
+  left: calc(360 / var(--page-w) * 100%);
+  top: calc(860 / var(--page-h) * 100%);
+  border-radius: 150px;
+  background: rgba(239, 68, 68, 0.25);
+  filter: blur(120px);
+}
+
+@media (max-width: 900px) {
+  .page-bg-blob--amber {
+    width: min(280px, 55vw);
+    height: min(280px, 55vw);
+    left: -8%;
+    top: 52%;
+  }
+
+  .page-bg-blob--coral {
+    width: min(320px, 70vw);
+    height: min(200px, 40vw);
+    left: 35%;
+    top: 62%;
+  }
+}

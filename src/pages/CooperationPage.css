@@ -1,0 +1,267 @@
+/**
+ * Agent Program / Cooperation — Figma (1440×1024). 100vh shell, blobs, scrollable column.
+ */
+
+.cooperation-page.page-section {
+  --coop-w: 1440;
+  --coop-h: 1024;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 3px 6px rgba(18, 15, 40, 0.12);
+}
+
+.cooperation-page .page-bg-blob--amber {
+  background: rgba(251, 191, 36, 0.25);
+}
+
+.cooperation-page .page-bg-blob--coral {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.cooperation-page__scroll {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cooperation-page__canvas {
+  width: 100%;
+  max-width: calc(var(--coop-w) * 1px);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5.28vw, 76px) clamp(48px, 8vh, 96px);
+  box-sizing: border-box;
+}
+
+/* —— Hero: 64 / 70, centered —— */
+.cooperation-page__hero {
+  text-align: center;
+  padding-top: clamp(24px, calc(98 / var(--coop-h) * 100vh), 98px);
+  padding-bottom: clamp(20px, 3vh, 32px);
+}
+
+.cooperation-page__hero-intro {
+  margin: clamp(16px, 2.5vh, 28px) auto 0;
+  max-width: 42rem;
+}
+
+.cooperation-page__title {
+  margin: 0 auto;
+  max-width: 15ch;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(40px, 4.5vw, 64px);
+  line-height: 70px;
+  letter-spacing: -1.6px;
+  color: #1b181c;
+}
+
+/* —— Body column: 22 / 34, max 1217, left —— */
+.cooperation-page__text-column {
+  max-width: 1217px;
+  width: 100%;
+  text-align: left;
+  margin-top: clamp(28px, 4vh, 48px);
+}
+
+.cooperation-page__text-column--centered-block {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.cooperation-page__h2 {
+  margin: clamp(28px, 4vh, 40px) 0 clamp(12px, 2vh, 16px);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+  color: #1b181c;
+}
+
+.cooperation-page__text-column > .cooperation-page__h2:first-child {
+  margin-top: 0;
+}
+
+.cooperation-page__body {
+  margin: 0 0 clamp(14px, 2vh, 20px);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 42px;
+  color: #1b181c;
+}
+
+.margin-top-24 {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+/* Intro line before agent steps: no bottom margin; line-height matches list (not 42px body) */
+.cooperation-page__steps-intro {
+  margin-bottom: 0;
+  line-height: 34px;
+}
+
+/* Replace UA <ol> top margin (~1em) with a small, fixed gap after intro */
+.cooperation-page__steps-intro + .cooperation-page__steps--numbered {
+  margin-top: clamp(8px, 1.2vh, 14px);
+}
+
+.cooperation-page__steps {
+  padding-left: 1.35em;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  line-height: 34px;
+  color: #1b181c;
+}
+
+.cooperation-page__steps--numbered {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cooperation-page__steps--numbered .cooperation-page__step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+}
+
+.cooperation-page__step-title {
+  display: block;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  line-height: 34px;
+  color: #1b181c;
+}
+
+.cooperation-page__step-desc {
+  margin: 0.15em 0 0;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  line-height: 34px;
+  color: #1b181c;
+}
+
+.cooperation-page__step {
+  /* margin-bottom: clamp(18px, 2.5vh, 28px); */
+  padding-left: 0.25em;
+}
+
+.cooperation-page__step:last-child {
+  margin-bottom: 0;
+}
+
+.cooperation-page__bullets {
+  margin: 0 0 clamp(14px, 2vh, 20px);
+  padding-left: 1.35em;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  line-height: 34px;
+  color: #1b181c;
+}
+
+.cooperation-page__bullets li {
+  margin-bottom: clamp(8px, 1.2vh, 12px);
+}
+
+.cooperation-page__bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* —— Centered section titles (About Agency, Join…) —— */
+.cooperation-page__band {
+  padding-top: clamp(40px, 6vh, 72px);
+}
+
+.cooperation-page__section-title {
+  margin: 0 0 clamp(16px, 2.5vh, 24px);
+  text-align: center;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  color: #1b181c;
+}
+
+.cooperation-page__band .cooperation-page__text-column {
+  margin-top: clamp(12px, 2vh, 20px);
+}
+
+/* CTA: 286×84, 28px radius, Lora 30px white */
+.cooperation-page__cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(32px, 5vh, 48px);
+  margin-bottom: clamp(28px, 4vh, 40px);
+}
+
+.cooperation-page__cta {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 286px;
+  min-height: 84px;
+  padding: 0 28px;
+  background: #71717a;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 28px;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 70px;
+  letter-spacing: -1.6px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.15s ease;
+}
+
+.cooperation-page__cta:hover {
+  background: #52525b;
+}
+
+.cooperation-page__cta:focus-visible {
+  outline: 2px solid #1b181c;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .cooperation-page__title {
+    line-height: 1.1;
+  }
+
+  .cooperation-page__body,
+  .cooperation-page__steps,
+  .cooperation-page__bullets {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .cooperation-page__cta {
+    min-width: min(286px, 100%);
+    font-size: 22px;
+    line-height: 1.3;
+  }
+}

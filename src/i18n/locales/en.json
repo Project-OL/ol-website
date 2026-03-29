@@ -1,0 +1,203 @@
+{
+  "brand": {
+    "name": "Offoo LIVE"
+  },
+  "nav": {
+    "homepage": "Homepage",
+    "contactUs": "Contact Us",
+    "cooperation": "Cooperation",
+    "updates": "Updates",
+    "policies": "Policies"
+  },
+  "header": {
+    "primaryNavAria": "Primary",
+    "langButtonAria": "Choose language",
+    "langMenuAria": "Available languages",
+    "policiesMenuAria": "Policies and legal documents",
+    "currentLanguageFallback": "Language"
+  },
+  "hero": {
+    "ariaSection": "Offoo Live homepage hero",
+    "ariaBg": "Neon city scene",
+    "tagline": "LIVE BEYOND BOUNDARIES,\nMAKE REAL CONNECTIONS"
+  },
+  "vblock": {
+    "rec": "REC",
+    "live": "LIVE",
+    "toFriends": "TO FRIENDS"
+  },
+  "value": {
+    "title": "Where Every Stream Creates Meaningful Connection",
+    "lede": "From a simple introduction to engaging shared experiences, Offoolive transforms live streaming into a space for authentic interaction and community.",
+    "storeAppStore": "App Store",
+    "storeGooglePlay": "Google Play",
+    "storeAndroid": "Android",
+    "ariaAppStore": "Download on the App Store",
+    "ariaGooglePlay": "Get it on Google Play",
+    "ariaAndroid": "Download for Android",
+    "colLiveTitle": "Live Interaction",
+    "colLiveBody": "Discover creators, join live sessions, and engage in real-time conversations that bring audiences and hosts closer together.",
+    "colGiftsTitle": "Digital Gifts",
+    "colGiftsBody": "Support creators through interactive virtual gifts designed to enhance engagement and celebrate memorable live moments.",
+    "colSubTitle": "Subscription & Premium Access",
+    "colSubBody": "Unlock exclusive features with Offoolive subscriptions. Enjoy premium content, priority interactions with hosts, and enhanced platform privileges designed for dedicated users."
+  },
+  "pk": {
+    "line1": "PK Battles",
+    "line2": "Real-Time Competition, Real Excitement",
+    "body": "PK mode enables creators to engage in real-time competitive streams, fostering interaction, audience participation, and a more dynamic live experience.",
+    "altImage": "PK Battle mode on mobile, with two competing creators and live energy effects"
+  },
+  "talent": {
+    "line1": "Show Your Talent",
+    "line2": "Every Gift Powers The Stream",
+    "p1": "Go live and showcase your unique talents to a global audience on Offoolive.",
+    "p2": "Engage with viewers in real time and build your own community of supporters.",
+    "p3": "Every gift sent by fans boosts your stream and helps turn creativity into real rewards.",
+    "p4": "Grow your influence, connect with people, and make every live moment count.",
+    "altImage": "Offoolive live stream on a phone: performer with guitar, gifts, chat, and live controls"
+  },
+  "premium": {
+    "line1": "Unlock Premium Access",
+    "line2": "Monthly Subscriptions to Your Favorite Hosts",
+    "bodyBeforeBreak": "Enjoy exclusive content and special perks by",
+    "bodyAfterBreak": "subscribing to your favorite hosts.",
+    "altImage": "Offoolive premium subscription on a phone with subscribe button, host, and reward icons"
+  },
+  "footer": {
+    "headline1": "Stream Live.",
+    "headline2": "Meet.",
+    "headline3": "Interact.",
+    "downloadApp": "Download App",
+    "storeAppStore": "App Store",
+    "storeGooglePlay": "Google Play",
+    "storeAndroid": "Android",
+    "ariaAppStore": "Download on the App Store",
+    "ariaGooglePlay": "Get it on Google Play",
+    "ariaAndroid": "Download for Android",
+    "navSecurity": "Security",
+    "navHelp": "Help",
+    "linkPrivacy": "Privacy Policy",
+    "linkTerms": "Terms Of Service",
+    "linkHost": "Host Agreement",
+    "linkRecharge": "Recharge Agreement",
+    "linkChild": "No Child Endangerment Policy",
+    "linkContact": "Contact Us",
+    "linkUpdates": "Updates",
+    "linkBusiness": "Business Cooperation",
+    "ariaFacebook": "Offoo Live on Facebook",
+    "ariaInstagram": "Offoo Live on Instagram",
+    "copyright": "© 2026 Offoo Live. All rights reserved.",
+    "legalContactEmail": "offoolive@gmail.com",
+    "legalContactEmailAria": "Email Offoo Live at offoolive@gmail.com"
+  },
+  "meta": {
+    "title": "Offoo LIVE"
+  },
+  "privacyPolicy": {
+    "ariaMain": "Offoo Live privacy policy"
+  },
+  "termsOfService": {
+    "ariaMain": "Offoo Live terms and conditions"
+  },
+  "hostAgreement": {
+    "ariaMain": "Offoo Live host policy and platform rules"
+  },
+  "coinRechargePolicy": {
+    "ariaMain": "Offoo Live coin recharge and virtual currency policy"
+  },
+  "childSafetyPolicy": {
+    "ariaMain": "Offoo Live child safety and protection policy"
+  },
+  "contact": {
+    "ariaMain": "Connect with Offoo Live",
+    "heroTitle": "Connect With Us",
+    "heroSubtitle": "Building connections, supporting creators, and collaborating with partners across the global live streaming community.",
+    "btnCollaborate": "Collaborate with us",
+    "btnSupport": "Get Support",
+    "exploreTitle": "Explore the Future of Live Social",
+    "journeyTitle": "Where Our Journey Begins",
+    "journeyBody": "Offoolive is a next-generation live social platform designed to bring creators and audiences together through real-time interaction. The platform enables people to share experiences, build communities, and discover new forms of digital entertainment.",
+    "missionTitle": "Our Mission",
+    "missionBody": "To connect creators and audiences through meaningful live interactions while providing a platform where creativity, entertainment, and community engagement thrive.",
+    "visionTitle": "Our Vision",
+    "visionBody": "To build a trusted global live streaming ecosystem where people can express themselves, share experiences, and form authentic digital communities.",
+    "assistanceTitle": "Need Assistance?",
+    "assistanceIntro": "If you are experiencing issues with your account, follow these steps:",
+    "step1Title": "Open the Offoolive App",
+    "step1Body": "Log in to your Offoolive account.",
+    "step2Title": "Go to Profile → Support Center",
+    "step2Body": "Access the help section inside the app.",
+    "step3Title": "Submit a Support Request",
+    "step3Body": "Send your issue through the support system and our team will assist you.",
+    "partnerTitle": "Partner With Us",
+    "partnerLede": "We welcome collaboration with businesses, agencies, and partners interested in working with the Offoolive platform.",
+    "partnerSub": "Business Partnerships",
+    "partnerHint": "For advertising, partnerships, or strategic collaboration inquiries:",
+    "contactBlockTitle": "Contact Us",
+    "otherTitle": "Other Inquiries",
+    "otherHint": "For general questions, platform issues, or additional support requests:",
+    "stepNumber1": "01.",
+    "stepNumber2": "02.",
+    "stepNumber3": "03.",
+    "emailBusinessAria": "Email business partnerships at business@offoolive.com",
+    "emailSupportAria": "Email support at support@offoolive.com"
+  },
+  "cooperation": {
+    "ariaMain": "Offoo Live agent program and cooperation",
+    "heroTitle": "Agent Program",
+    "intro": "Build your team, support creators, and grow your earnings through the Offoolive agency program.",
+    "becomeTitle": "Become an Offoolive Agent",
+    "becomeTagline": "Build Your Team. Grow Your Earnings.",
+    "becomeBody": "Become an agency leader on Offoolive and build your own network of creators. Support hosts, grow your community, and earn commissions through your agency's performance.",
+    "stepsTitle": "How To Become An Agent",
+    "stepsIntro": "Follow these simple steps to join the Offoolive agency program.",
+    "agentStep1Title": "Download Offoolive",
+    "agentStep1Body": "Install the Offoolive app and create your account.",
+    "agentStep2Title": "Create Your Account",
+    "agentStep2Body": "Register and complete your profile on the platform.",
+    "agentStep3Title": "Copy Your User ID",
+    "agentStep3Body": "Locate and copy your unique Offoolive platform ID.",
+    "agentStep4Title": "Submit Agent Application",
+    "agentStep4Body": "Fill out the agent application form using your platform ID.",
+    "agentStep5Title": "Get Approved",
+    "agentStep5Body": "After approval, start building and managing your agency.",
+    "aboutTitle": "About Agency",
+    "whatIsTitle": "What Is An Agency",
+    "whatIsBody": "An Offoolive Agency is a creator network managed by an agent who recruits, guides, and supports live streaming hosts. Agents help hosts grow their audience, improve content quality, and participate in platform activities. Agencies play an important role in building active communities and maintaining high-quality live streaming experiences.",
+    "respTitle": "Agent Responsibilities",
+    "respIntro": "Agents play a key role in developing the Offoolive creator community.",
+    "respIntro2": "Agents are responsible for:",
+    "resp1": "Recruiting and onboarding new hosts",
+    "resp2": "Guiding hosts to improve content and engagement",
+    "resp3": "Helping hosts understand platform rules and events",
+    "resp4": "Building and managing an active creator community",
+    "commissionTitle": "Agency Commission Structure",
+    "commissionBody": "Agents earn commissions based on the performance of their team.",
+    "commissionRange": "Commission Range: 4% - 24%",
+    "rewardsTitle": "This structure rewards agents who actively grow strong teams and support host performance.",
+    "rewardsSubTitle": "Additional Agent Rewards",
+    "rewardsIntro": "Agents may receive additional performance-based rewards such as:",
+    "rewards1": "Host Invitation Bonus",
+    "rewards2": "Agent Invitation Rewards",
+    "rewards3": "Agency Performance Bonuses",
+    "rewards4": "Ranking Rewards",
+    "rewards5": "Special Platform Campaign Incentives",
+    "growthTitle": "Agent Growth Program",
+    "growthIntro": "Offoolive provides a structured growth system designed to help agents expand their agencies and strengthen leadership within the platform.",
+    "growthIntro2": "Agents gain access to:",
+    "growth1": "Access to agency management tools",
+    "growth2": "Performance tracking dashboards",
+    "growth3": "Inclusive platform events",
+    "growth4": "Opportunities to grow large creator networks",
+    "joinTitle": "Join the Offoolive Network",
+    "joinTagline": "Become an Offoolive Agent Today",
+    "joinBody": "Start building your creator network, support talented hosts, and grow your influence within the Offoolive community.",
+    "ctaApply": "Apply For Agency",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimer1": "Earnings are performance-based and may vary by individual.",
+    "disclaimer2": "Agents and hosts participate as independent users of the platform.",
+    "disclaimer3": "All programs are subject to Offoolive platform policies and applicable local laws and regulations.",
+    "ctaMailSubject": "Agency Application"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "header": {
+    "currentLanguageFallback": "भाषा"
+  },
+  "contact": {
+    "stepNumber1": "०१.",
+    "stepNumber2": "०२.",
+    "stepNumber3": "०३.",
+    "emailBusinessAria": "व्यापार साझेदारी इमेल: business@offoolive.com",
+    "emailSupportAria": "सहयोग इमेल: support@offoolive.com"
+  },
+  "cooperation": {
+    "ctaMailSubject": "एजेन्सी आवेदन"
+  },
+  "footer": {
+    "legalContactEmail": "offoolive@gmail.com",
+    "legalContactEmailAria": "Offoo Live इमेल: offoolive@gmail.com"
+  }
+}

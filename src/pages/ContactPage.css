@@ -1,0 +1,238 @@
+/**
+ * Connect With Us — Figma frame (1440×1024 reference).
+ * Viewport shell: 100vh + page-layout blobs; inner column scrolls.
+ */
+
+.contact-page.page-section {
+  --contact-w: 1440;
+  --contact-h: 1024;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 3px 6px rgba(18, 15, 40, 0.12);
+}
+
+/* Blobs — match Figma rgba (page-layout defaults differ slightly) */
+.contact-page .page-bg-blob--amber {
+  background: rgba(251, 191, 36, 0.25);
+}
+
+.contact-page .page-bg-blob--coral {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.contact-page__scroll {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.contact-page__canvas {
+  width: 100%;
+  max-width: calc(var(--contact-w) * 1px);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5.28vw, 76px) clamp(48px, 8vh, 96px);
+  box-sizing: border-box;
+}
+
+/* —— Hero —— */
+.contact-page__hero {
+  text-align: center;
+  padding-top: clamp(24px, calc(98 / var(--contact-h) * 100vh), 98px);
+  padding-bottom: clamp(32px, 4vh, 56px);
+}
+
+.contact-page__title {
+  margin: 0 auto;
+  max-width: 20ch;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: -1.6px;
+  color: #1b181c;
+}
+
+.contact-page__lede {
+  margin: 40px auto 0;
+  max-width: 1133px;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 36px;
+  color: #1b181c;
+}
+
+.contact-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 32px);
+  margin-top: clamp(28px, 4vh, 40px);
+}
+
+.contact-page__btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min(286px, 100%);
+  min-height: 100px;
+  padding: 0 24px;
+  background: #71717a;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 28px;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size:30px;
+  line-height:70px;
+  letter-spacing: -1.6px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.contact-page__btn:hover {
+  background: #52525b;
+}
+
+.contact-page__btn:focus-visible {
+  outline: 2px solid #1b181c;
+  outline-offset: 3px;
+}
+
+/* —— Sections —— */
+.contact-page__section {
+  padding-top: clamp(40px, 6vh, 72px);
+}
+
+.contact-page__section-title {
+  margin: 0 0 clamp(20px, 2.5vh, 28px);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  color: #1b181c;
+}
+
+.contact-page__section-title-contact {
+  /* margin: 0 0 clamp(20px, 2.5vh, 28px); */
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #1b181c;
+}
+.contact-page__section-title--center {
+  text-align: center;
+  max-width: none;
+}
+
+/* Partner + Contact blocks: same max width & left edge as Explore / Assistance (Figma ~1217px body) */
+.contact-page__text-column {
+  max-width: 1217px;
+  width: 100%;
+  text-align: left;
+}
+
+.contact-page__section--partner .contact-page__section-title--center {
+  width: 100%;
+}
+
+.contact-page__section--partner .contact-page__text-column {
+  margin-top: clamp(8px, 1.5vh, 16px);
+}
+
+.contact-page__section--contact {
+  padding-top: clamp(48px, 7vh, 88px);
+}
+
+.contact-page__prose p,
+.contact-page__body {
+  margin: 0 0;
+  max-width: 1217px;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  color: #1b181c;
+}
+
+.contact-page__prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* —— Steps —— */
+.contact-page__steps {
+  margin: 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 1217px;
+}
+
+.contact-page__step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(12px, 2vw, 24px);
+  align-items: start;
+  /* margin-bottom: clamp(24px, 3vh, 36px); */
+}
+
+.contact-page__step:last-child {
+  margin-bottom: 0;
+}
+
+.contact-page__step-body p {
+  margin: 0 0;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 36px;
+  color: #1b181c;
+}
+
+/* —— Emails —— */
+.contact-page__email-wrap {
+  margin: 0.5em 0 0;
+}
+
+.contact-page__email {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 36px;
+  color: #1b181c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-page__email:hover {
+  color: #52525b;
+}
+
+.contact-page__section--contact .contact-page__text-column {
+  padding-bottom: 8px;
+}
+
+#assistance,
+#partner {
+  scroll-margin-top: 88px;
+}

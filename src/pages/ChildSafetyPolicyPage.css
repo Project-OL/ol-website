@@ -1,0 +1,190 @@
+/**
+ * Child safety policy — 100vh shell, both blobs, scrollable content (matches privacy / coin pages).
+ */
+
+.child-safety-policy-page.page-section {
+  --csp-w: 1440;
+  --csp-h: 1024;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 3px 6px rgba(18, 15, 40, 0.12);
+}
+
+.child-safety-policy-page .page-bg-blob--amber {
+  background: rgba(251, 191, 36, 0.25);
+}
+
+.child-safety-policy-page .page-bg-blob--coral {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.child-safety-policy-page__scroll {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.child-safety-policy-page__canvas {
+  width: 100%;
+  max-width: calc(var(--csp-w) * 1px);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5.28vw, 76px) clamp(48px, 8vh, 96px);
+  box-sizing: border-box;
+}
+
+.child-safety-policy-page__hero {
+  text-align: center;
+  padding-top: clamp(24px, calc(98 / var(--csp-h) * 100vh), 98px);
+  padding-bottom: clamp(12px, 2vh, 24px);
+}
+
+.child-safety-policy-page__title {
+  margin: 0 auto;
+  max-width: 28ch;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+  color: #1b181c;
+}
+
+.child-safety-policy-page__subtitle {
+  margin: clamp(10px, 1.5vh, 16px) auto 0;
+  max-width: 36ch;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.4;
+  color: #1b181c;
+  opacity: 0.92;
+}
+
+.child-safety-policy-page__tagline {
+  margin: clamp(8px, 1.2vh, 12px) auto 0;
+  max-width: 40ch;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.35;
+  color: #1b181c;
+  opacity: 0.9;
+}
+
+.child-safety-policy-page__illustration-wrap {
+  margin-top: clamp(16px, 3vh, 32px);
+  display: flex;
+  justify-content: center;
+}
+
+.child-safety-policy-page__illustration {
+  width: min(680px, 52vw);
+  height: auto;
+  max-height: min(480px, 38vh);
+  object-fit: contain;
+  display: block;
+}
+
+.child-safety-policy-page__body {
+  max-width: 1217px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.child-safety-policy-page__h2 {
+  margin: clamp(28px, 4vh, 40px) 0 clamp(12px, 2vh, 16px);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.3;
+  color: #1b181c;
+}
+
+.child-safety-policy-page__body > .child-safety-policy-page__h2:first-of-type {
+  margin-top: clamp(8px, 1.5vh, 16px);
+}
+
+.child-safety-policy-page__label {
+  margin: clamp(16px, 2vh, 20px) 0 clamp(8px, 1vh, 12px);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: #1b181c;
+}
+
+.child-safety-policy-page__p {
+  margin: 0 0 clamp(14px, 2vh, 20px);
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: #1b181c;
+}
+
+.child-safety-policy-page__list {
+  margin: 0 0 clamp(14px, 2vh, 20px);
+  padding-left: 1.35em;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  line-height: 34px;
+  color: #1b181c;
+}
+
+.child-safety-policy-page__list li {
+  margin-bottom: clamp(8px, 1.2vh, 12px);
+}
+
+.child-safety-policy-page__list li:last-child {
+  margin-bottom: 0;
+}
+
+ol.child-safety-policy-page__list {
+  list-style-type: decimal;
+}
+
+ul.child-safety-policy-page__list {
+  list-style-type: disc;
+}
+
+.child-safety-policy-page__mailto {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.child-safety-policy-page__mailto:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .child-safety-policy-page__title {
+    letter-spacing: -0.8px;
+  }
+
+  .child-safety-policy-page__p,
+  .child-safety-policy-page__list,
+  .child-safety-policy-page__label {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .child-safety-policy-page__h2 {
+    font-size: 22px;
+  }
+}

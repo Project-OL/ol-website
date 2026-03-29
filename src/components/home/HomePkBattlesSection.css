@@ -1,0 +1,121 @@
+/* PK Battles block — 1440×1024 Figma frame, positions as % of --page-w / --page-h */
+
+.home-pk-section {
+  min-height: calc(var(--page-h) * 1px);
+}
+
+.home-pk-section__canvas {
+  position: relative;
+  width: 100%;
+  min-height: calc(var(--page-h) * 1px);
+  box-sizing: border-box;
+}
+
+/* POPPO LIVE (spec) → two-line PK headline: 946×213 @ 150,87 */
+.home-pk-section__heading {
+  position: absolute;
+  left: calc(150 / var(--page-w) * 100%);
+  top: calc(87 / var(--page-h) * 100%);
+  width: calc(946 / var(--page-w) * 100%);
+  max-width: 946px;
+  min-height: 213px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 49px;
+  color: #000000;
+  text-align: left;
+}
+
+.home-pk-section__heading-line {
+  display: block;
+}
+
+/* Frame 2 — 611×397 @ 51,300 */
+.home-pk-section__figure {
+  position: absolute;
+  left: calc(51 / var(--page-w) * 100%);
+  top: calc(300 / var(--page-h) * 100%);
+  width: 611;
+  max-width: 611px;
+  height: 397px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.home-pk-section__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Feel the fun… (spec) — Lora block: 624×280 @ 765,374 */
+.home-pk-section__body {
+  position: absolute;
+  left: calc(765 / var(--page-w) * 100%);
+  top: calc(374 / var(--page-h) * 100%);
+  width: calc(624 / var(--page-w) * 100%);
+  max-width: 624px;
+  min-height: 280px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 70px;
+  letter-spacing: -1.6px;
+  color: #1b181c;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .home-pk-section {
+    min-height: auto;
+  }
+
+  .home-pk-section__canvas {
+    min-height: auto;
+    padding: 3rem 5% 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .home-pk-section__heading,
+  .home-pk-section__figure,
+  .home-pk-section__body {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 40rem;
+    min-height: 0;
+  }
+
+  .home-pk-section__figure {
+    height: auto;
+    aspect-ratio: 611 / 397;
+    max-width: 611px;
+  }
+
+  .home-pk-section__heading {
+    font-size: clamp(32px, 6vw, 48px);
+    line-height: 1.05;
+  }
+
+  .home-pk-section__body {
+    font-size: clamp(20px, 3.5vw, 32px);
+    line-height: 1.6;
+    letter-spacing: -0.06em;
+  }
+}
