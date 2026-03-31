@@ -8,9 +8,11 @@
   box-sizing: border-box;
 }
 
-/* Extra 40px band at bottom for horizontal gradient bar */
+/* Flex column so .site-footer__canvas fills footer's min-height; legal bottom:… stays above gradient at any viewport height */
 .site-footer.page-section {
   --footer-bottom-bar-height: 40px;
+  display: flex;
+  flex-direction: column;
   max-height: none;
   min-height: calc(100vh + var(--footer-bottom-bar-height));
 }
@@ -27,6 +29,7 @@
 .site-footer__canvas {
   position: relative;
   z-index: 1;
+  flex: 1 1 auto;
   width: 100%;
   min-height: calc(793px + var(--footer-bottom-bar-height));
   box-sizing: border-box;
@@ -277,11 +280,12 @@
   outline-offset: 2px;
 }
 
-/* Legal — sits on white above the bottom gradient bar */
+/* Legal — pinned to canvas bottom (canvas stretches with footer), always above gradient bar */
 .site-footer__legal {
   position: absolute;
   left: calc(27 / var(--page-w) * 100%);
   bottom: calc(var(--footer-bottom-bar-height) + 18px);
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -316,10 +320,12 @@
   }
 
   .site-footer.page-section {
+    display: block;
     min-height: auto;
   }
 
   .site-footer__canvas {
+    flex: none;
     min-height: auto;
     padding: 3rem 5% calc(5.5rem + var(--footer-bottom-bar-height));
     display: flex;
