@@ -52,11 +52,6 @@
   padding-bottom: clamp(20px, 3vh, 32px);
 }
 
-.cooperation-page__hero-intro {
-  margin: clamp(16px, 2.5vh, 28px) auto 0;
-  max-width: 42rem;
-}
-
 .cooperation-page__title {
   margin: 0 auto;
   max-width: 15ch;

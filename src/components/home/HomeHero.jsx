@@ -34,9 +34,10 @@ export function HomeHero() {
 
       <HeroFloatingDecor />
 
-      <p className="home-hero__tagline">{t('hero.tagline')}</p>
-
-      <HeroVBlock />
+      <div className="home-hero__bottom-stack">
+        <p className="home-hero__tagline">{t('hero.tagline')}</p>
+        <HeroVBlock />
+      </div>
 
     </section>
 

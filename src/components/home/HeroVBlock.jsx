@@ -16,7 +16,9 @@ export function HeroVBlock() {
           <span className="hero-vblock__live-text">{t('vblock.live')}</span>
         </div>
       </div>
-      <h2 className="hero-vblock__title">{t('vblock.toFriends')}</h2>
+      <h2 className="hero-vblock__title" title={t('vblock.toFriends')}>
+        {t('vblock.toFriends')}
+      </h2>
     </div>
   )
 }

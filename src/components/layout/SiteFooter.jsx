@@ -60,35 +60,35 @@ export function SiteFooter() {
       className="page-section page-section--surface site-footer"
       aria-labelledby="site-footer-heading"
     >
-      <div className="page-bg-blobs" aria-hidden>
+      <div className="page-bg-blobs site-footer__blobs" aria-hidden>
         <div className="page-bg-blob page-bg-blob--amber" />
         <div className="page-bg-blob page-bg-blob--coral" />
       </div>
 
-      {/* <div className="site-footer__accent" aria-hidden /> */}
-
       <div className="page-section__content site-footer__canvas">
-        <h2 id="site-footer-heading" className="site-footer__headline">
-          <span className="site-footer__headline-line">{t('footer.headline1')}</span>
-          <span className="site-footer__headline-line">{t('footer.headline2')}</span>
-          <span className="site-footer__headline-line">{t('footer.headline3')}</span>
-        </h2>
+        <div className="site-footer__lead">
+          <h2 id="site-footer-heading" className="site-footer__headline">
+            <span className="site-footer__headline-line">{t('footer.headline1')}</span>
+            <span className="site-footer__headline-line">{t('footer.headline2')}</span>
+            <span className="site-footer__headline-line">{t('footer.headline3')}</span>
+          </h2>
 
-        <p className="site-footer__download-label">{t('footer.downloadApp')}</p>
+          <p className="site-footer__download-label">{t('footer.downloadApp')}</p>
 
-        <div className="site-footer__stores">
-          <a className="site-footer__store site-footer__store--apple" href="#" aria-label={t('footer.ariaAppStore')}>
-            <IconAppleSmall />
-            <span>{t('footer.storeAppStore')}</span>
-          </a>
-          <a className="site-footer__store site-footer__store--google" href="#" aria-label={t('footer.ariaGooglePlay')}>
-            <IconPlaySmall />
-            <span>{t('footer.storeGooglePlay')}</span>
-          </a>
-          <a className="site-footer__store site-footer__store--android" href="#" aria-label={t('footer.ariaAndroid')}>
-            <IconPhoneSmall />
-            <span>{t('footer.storeAndroid')}</span>
-          </a>
+          <div className="site-footer__stores">
+            <a className="site-footer__store site-footer__store--apple" href="#" aria-label={t('footer.ariaAppStore')}>
+              <IconAppleSmall />
+              <span>{t('footer.storeAppStore')}</span>
+            </a>
+            <a className="site-footer__store site-footer__store--google" href="#" aria-label={t('footer.ariaGooglePlay')}>
+              <IconPlaySmall />
+              <span>{t('footer.storeGooglePlay')}</span>
+            </a>
+            <a className="site-footer__store site-footer__store--android" href="#" aria-label={t('footer.ariaAndroid')}>
+              <IconPhoneSmall />
+              <span>{t('footer.storeAndroid')}</span>
+            </a>
+          </div>
         </div>
 
         <nav className="site-footer__col site-footer__col--security" aria-label={t('footer.navSecurity')}>
@@ -174,6 +174,9 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
+
+      {/* Horizontal accent: pale yellow (L) → peach → white (R), bottom 40px — ref. footer mock */}
+      <div className="site-footer__bottom-gradient-bar" aria-hidden />
     </footer>
   )
 }

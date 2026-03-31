@@ -26,7 +26,6 @@ export function CooperationPage() {
         <div className="cooperation-page__canvas">
           <header className="cooperation-page__hero">
             <h1 className="cooperation-page__title">{t('cooperation.heroTitle')}</h1>
-            <p className="cooperation-page__body cooperation-page__hero-intro">{t('cooperation.intro')}</p>
           </header>
 
           <div className="cooperation-page__text-column">

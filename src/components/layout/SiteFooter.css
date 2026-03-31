@@ -8,30 +8,82 @@
   box-sizing: border-box;
 }
 
+/* Extra 40px band at bottom for horizontal gradient bar */
+.site-footer.page-section {
+  --footer-bottom-bar-height: 40px;
+  max-height: none;
+  min-height: calc(100vh + var(--footer-bottom-bar-height));
+}
+
 .site-footer.page-section--surface {
   background: #ffffff;
 }
 
+/* Blurred blobs clash with the clean horizontal strip — keep markup, hide in footer */
+.site-footer__blobs {
+  display: none;
+}
+
 .site-footer__canvas {
   position: relative;
+  z-index: 1;
   width: 100%;
-  min-height: calc(100vh - 40px);
+  min-height: calc(793px + var(--footer-bottom-bar-height));
   box-sizing: border-box;
   background: #ffffff;
   /* “Download App” vertical rhythm vs headline / stores (2× lh above, 1× lh below) */
   --footer-download-lh: 26px;
   --footer-gap-download-after-headline: calc(2 * var(--footer-download-lh));
   --footer-gap-stores-after-download: calc(1 * var(--footer-download-lh));
+  /* Left (.site-footer__lead) and right nav columns share this top — same horizontal start */
+  --footer-row-start: calc(125.43 / var(--page-h) * 100%);
 }
 
-/* Go live… — 358×~220 @ 43,125.43 (design: Stream Live. Meet. Interact.) */
-.site-footer__headline {
+/* Bottom strip: buttery yellow (left) → soft peach → white (right), over white canvas */
+.site-footer__bottom-gradient-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--footer-bottom-bar-height);
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    #fff4d6 0%,
+    #ffefcb 8%,
+    #ffe5dc 22%,
+    #fde8e8 38%,
+    #fafafa 58%,
+    #ffffff 78%,
+    #ffffff 100%
+  );
+}
+
+/* Headline + Download App + stores — one column so headline height never overlaps the label */
+.site-footer__lead {
   position: absolute;
   left: calc(43 / var(--page-w) * 100%);
-  top: calc(125.43 / var(--page-h) * 100%);
-  width: calc(358 / var(--page-w) * 100%);
-  max-width: 358px;
-  margin: 0;
+  top: var(--footer-row-start);
+  width: auto;
+  max-width: min(
+    calc((955 - 43) / var(--page-w) * 100% - 1.5rem),
+    52rem
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Go live… — uses full width of .site-footer__lead (wider than 358px when space exists) */
+.site-footer__headline {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 var(--footer-gap-download-after-headline);
   padding: 0;
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-style: normal;
@@ -44,17 +96,20 @@
 
 .site-footer__headline-line {
   display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Download App — below headline: 2× label line-height; above stores: 1× label line-height */
+/* Download App — flows under headline in .site-footer__lead */
 .site-footer__download-label {
-  position: absolute;
-  left: calc(44 / var(--page-w) * 100%);
-  top: calc(
-    125.43 / var(--page-h) * 100% + 3 * 70px + var(--footer-gap-download-after-headline)
-  );
-  width: 130px;
-  margin: 0;
+  position: relative;
+  left: auto;
+  top: auto;
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 var(--footer-gap-stores-after-download);
   font-family: 'Inter', system-ui, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -63,14 +118,11 @@
   color: #6b6d6f;
 }
 
-/* Store row — 12px gaps; top = headline stack + download row + gap below label */
+/* Store row — flows under download label */
 .site-footer__stores {
-  position: absolute;
-  left: calc(43 / var(--page-w) * 100%);
-  top: calc(
-    125.43 / var(--page-h) * 100% + 3 * 70px + var(--footer-gap-download-after-headline) +
-      var(--footer-download-lh) + var(--footer-gap-stores-after-download)
-  );
+  position: relative;
+  left: auto;
+  top: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -132,11 +184,11 @@
   outline-offset: 2px;
 }
 
-/* Security column @ 955 */
+/* Security column @ 955 — top aligned with .site-footer__lead */
 .site-footer__col--security {
   position: absolute;
   left: calc(955 / var(--page-w) * 100%);
-  top: calc(187.21 / var(--page-h) * 100%);
+  top: var(--footer-row-start);
   width: 210px;
 }
 
@@ -150,11 +202,11 @@
   color: #8a8a8a;
 }
 
-/* Help @ 1236 */
+/* Help @ 1236 — top aligned with lead + Security */
 .site-footer__col--help {
   position: absolute;
   left: calc(1236 / var(--page-w) * 100%);
-  top: calc(186.16 / var(--page-h) * 100%);
+  top: var(--footer-row-start);
   width: 160px;
 }
 
@@ -225,12 +277,11 @@
   outline-offset: 2px;
 }
 
-/* Legal @ 27,931.65 */
+/* Legal — sits on white above the bottom gradient bar */
 .site-footer__legal {
   position: absolute;
   left: calc(27 / var(--page-w) * 100%);
-  /* top: calc(931.65 / var(--page-h) * 100%); */
-  bottom: 30px;
+  bottom: calc(var(--footer-bottom-bar-height) + 18px);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -264,12 +315,24 @@
     min-height: auto;
   }
 
+  .site-footer.page-section {
+    min-height: auto;
+  }
+
   .site-footer__canvas {
     min-height: auto;
-    padding: 3rem 5% 5.5rem;
+    padding: 3rem 5% calc(5.5rem + var(--footer-bottom-bar-height));
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+  }
+
+  .site-footer__lead {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: none;
   }
 
   .site-footer__headline,
@@ -289,13 +352,17 @@
   .site-footer__headline {
     font-size: clamp(40px, 10vw, 64px);
     line-height: 1.1;
-    /* Net space to “Download App” = 2× download line-height (parent flex gap is offset) */
-    margin-bottom: calc(var(--footer-gap-download-after-headline) - 2.5rem);
+    margin-bottom: var(--footer-gap-download-after-headline);
+  }
+
+  .site-footer__headline-line {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .site-footer__download-label {
-    /* Net space to store row = 1× download line-height */
-    margin-bottom: calc(var(--footer-gap-stores-after-download) - 2.5rem);
+    margin-bottom: var(--footer-gap-stores-after-download);
   }
 
   .site-footer__stores {
@@ -305,5 +372,9 @@
   .site-footer__col--security,
   .site-footer__col--help {
     position: relative;
+  }
+
+  .site-footer__legal {
+    bottom: auto;
   }
 }

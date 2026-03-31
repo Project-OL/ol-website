@@ -11,13 +11,14 @@
   box-sizing: border-box;
 }
 
-/* POPPO LIVE (spec) → two-line PK headline: 946×213 @ 150,87 */
+/* PK headline @ 150,87 — stretch to same right margin as body column (1440 − 51) */
 .home-pk-section__heading {
   position: absolute;
   left: calc(150 / var(--page-w) * 100%);
+  right: calc(51 / var(--page-w) * 100%);
   top: calc(87 / var(--page-h) * 100%);
-  width: calc(946 / var(--page-w) * 100%);
-  max-width: 946px;
+  width: auto;
+  max-width: none;
   min-height: 213px;
   margin: 0;
   padding: 0;
@@ -57,13 +58,14 @@
   display: block;
 }
 
-/* Feel the fun… (spec) — Lora block: 624×280 @ 765,374 */
+/* Body @ 765,374 — fill to right margin (51px) on wide viewports */
 .home-pk-section__body {
   position: absolute;
   left: calc(765 / var(--page-w) * 100%);
+  right: calc(51 / var(--page-w) * 100%);
   top: calc(374 / var(--page-h) * 100%);
-  width: calc(624 / var(--page-w) * 100%);
-  max-width: 624px;
+  width: auto;
+  max-width: none;
   min-height: 280px;
   margin: 0;
   padding: 0;
