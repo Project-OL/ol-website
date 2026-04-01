@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n/useI18n.js'
 import { HeroHeader } from '../components/home/HeroHeader'
+import { SEO } from '../components/SEO.jsx'
 import './ContactPage.css'
 
 export function ContactPage() {
@@ -10,6 +11,7 @@ export function ContactPage() {
       className="contact-page page-section page-section--surface"
       aria-label={t('contact.ariaMain')}
     >
+      <SEO title={t('seo.contactTitle')} description={t('seo.contactDescription')} path="/contact" />
       <div className="page-bg-blobs" aria-hidden>
         <div className="page-bg-blob page-bg-blob--amber" />
         <div className="page-bg-blob page-bg-blob--coral" />

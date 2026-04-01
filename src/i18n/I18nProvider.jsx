@@ -50,10 +50,6 @@ export function I18nProvider({ children }) {
     html.dir = locale === 'ar' ? 'rtl' : 'ltr'
   }, [locale])
 
-  useEffect(() => {
-    document.title = resolvePath(catalogs[locale], 'meta.title') || 'Offoo LIVE'
-  }, [locale])
-
   const value = useMemo(
     () => ({
       locale,

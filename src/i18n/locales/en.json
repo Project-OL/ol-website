@@ -91,8 +91,25 @@
     "legalContactEmail": "offoolive@gmail.com",
     "legalContactEmailAria": "Email Offoo Live at offoolive@gmail.com"
   },
-  "meta": {
-    "title": "Offoo LIVE"
+  "seo": {
+    "homeTitle": "Offoolive | Live Social Streaming & Real-Time Connection",
+    "homeDescription": "Offoolive (offoolive.com) is a social live streaming platform: live sessions, digital gifts, PK battles, subscriptions, and a global community. Download Offoolive today.",
+    "homeOgTitle": "Offoolive",
+    "homeH1": "Offoolive — live social streaming and real-time connection",
+    "contactTitle": "Contact Offoolive | Support & Partnerships | offoolive.com",
+    "contactDescription": "Contact Offoolive on offoolive.com for support, partnerships, and business inquiries. We help creators and audiences on our live streaming platform.",
+    "cooperationTitle": "Agent Program & Business Cooperation | Offoolive | offoolive.com",
+    "cooperationDescription": "Offoolive agency program on offoolive.com: build your team, support creators, and grow earnings. Apply for business cooperation with Offoolive.",
+    "privacyTitle": "Privacy Policy | Offoolive | offoolive.com",
+    "privacyDescription": "Offoolive Privacy Policy for offoolive.com: how we collect, use, and protect your personal data on our live streaming platform.",
+    "termsTitle": "Terms of Service | Offoolive | offoolive.com",
+    "termsDescription": "Offoolive Terms & Conditions for using offoolive.com and our live streaming services. Read the full legal terms.",
+    "hostTitle": "Host Agreement | Offoolive | offoolive.com",
+    "hostDescription": "Offoolive host agreement and platform rules for creators streaming on offoolive.com.",
+    "rechargeTitle": "Recharge Agreement | Offoolive Coins & Gifts | offoolive.com",
+    "rechargeDescription": "Offoolive coin recharge and virtual currency policy for purchases on offoolive.com.",
+    "childSafetyTitle": "Child Safety Policy | Offoolive | offoolive.com",
+    "childSafetyDescription": "Offoolive child safety policy for offoolive.com: protection standards and reporting for our live platform."
   },
   "privacyPolicy": {
     "ariaMain": "Offoo Live privacy policy"

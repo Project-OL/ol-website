@@ -26,6 +26,7 @@ export function HomePkBattlesSection() {
             alt={t('pk.altImage')}
             width={611}
             height={397}
+            loading="lazy"
             decoding="async"
           />
         </figure>

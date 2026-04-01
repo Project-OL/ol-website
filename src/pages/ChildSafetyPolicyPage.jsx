@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n/useI18n.js'
 import { HeroHeader } from '../components/home/HeroHeader'
+import { SEO } from '../components/SEO.jsx'
 import { LegalDocumentBlocks } from '../components/legal/LegalDocumentBlocks.jsx'
 import { pickLegal } from '../i18n/legal/pickLegal.js'
 import childEn from '../i18n/legal/child.en.js'
@@ -19,6 +20,11 @@ export function ChildSafetyPolicyPage() {
       className="child-safety-policy-page page-section page-section--surface"
       aria-label={t('childSafetyPolicy.ariaMain')}
     >
+      <SEO
+        title={t('seo.childSafetyTitle')}
+        description={t('seo.childSafetyDescription')}
+        path="/child-safety-policy"
+      />
       <div className="page-bg-blobs" aria-hidden>
         <div className="page-bg-blob page-bg-blob--amber" />
         <div className="page-bg-blob page-bg-blob--coral" />
@@ -38,6 +44,7 @@ export function ChildSafetyPolicyPage() {
                 alt=""
                 width={680}
                 height={480}
+                loading="lazy"
                 decoding="async"
                 className="child-safety-policy-page__illustration"
               />

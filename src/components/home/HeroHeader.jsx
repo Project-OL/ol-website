@@ -35,6 +35,7 @@ function LogoMark() {
         width={68}
         height={75}
         decoding="async"
+        fetchPriority="high"
         className="hero-header__logo-img"
       />
     </div>

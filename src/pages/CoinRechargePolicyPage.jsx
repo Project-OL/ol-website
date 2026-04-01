@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n/useI18n.js'
 import { HeroHeader } from '../components/home/HeroHeader'
+import { SEO } from '../components/SEO.jsx'
 import { LegalDocumentBlocks } from '../components/legal/LegalDocumentBlocks.jsx'
 import { pickLegal } from '../i18n/legal/pickLegal.js'
 import coinEn from '../i18n/legal/coin.en.js'
@@ -19,6 +20,11 @@ export function CoinRechargePolicyPage() {
       className="coin-recharge-policy-page page-section page-section--surface"
       aria-label={t('coinRechargePolicy.ariaMain')}
     >
+      <SEO
+        title={t('seo.rechargeTitle')}
+        description={t('seo.rechargeDescription')}
+        path="/recharge-agreement"
+      />
       <div className="page-bg-blobs" aria-hidden>
         <div className="page-bg-blob page-bg-blob--amber" />
         <div className="page-bg-blob page-bg-blob--coral" />
@@ -37,6 +43,7 @@ export function CoinRechargePolicyPage() {
                 alt=""
                 width={680}
                 height={480}
+                loading="lazy"
                 decoding="async"
                 className="coin-recharge-policy-page__coin"
               />

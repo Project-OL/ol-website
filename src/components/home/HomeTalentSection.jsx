@@ -26,6 +26,7 @@ export function HomeTalentSection() {
             alt={t('talent.altImage')}
             width={478}
             height={372}
+            loading="lazy"
             decoding="async"
           />
         </figure>

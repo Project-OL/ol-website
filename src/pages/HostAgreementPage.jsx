@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n/useI18n.js'
 import { HeroHeader } from '../components/home/HeroHeader'
+import { SEO } from '../components/SEO.jsx'
 import { LegalDocumentBlocks } from '../components/legal/LegalDocumentBlocks.jsx'
 import { pickLegal } from '../i18n/legal/pickLegal.js'
 import hostEn from '../i18n/legal/host.en.js'
@@ -18,6 +19,7 @@ export function HostAgreementPage() {
       className="host-agreement-page page-section page-section--surface"
       aria-label={t('hostAgreement.ariaMain')}
     >
+      <SEO title={t('seo.hostTitle')} description={t('seo.hostDescription')} path="/host-agreement" />
       <div className="page-bg-blobs" aria-hidden>
         <div className="page-bg-blob page-bg-blob--amber" />
         <div className="page-bg-blob page-bg-blob--coral" />

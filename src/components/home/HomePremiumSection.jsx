@@ -26,6 +26,7 @@ export function HomePremiumSection() {
             alt={t('premium.altImage')}
             width={429}
             height={484}
+            loading="lazy"
             decoding="async"
           />
         </figure>

@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n/useI18n.js'
 import { HeroHeader } from '../components/home/HeroHeader'
+import { SEO } from '../components/SEO.jsx'
 import { LegalDocumentBlocks } from '../components/legal/LegalDocumentBlocks.jsx'
 import { pickLegal } from '../i18n/legal/pickLegal.js'
 import privacyEn from '../i18n/legal/privacy.en.js'
@@ -19,6 +20,7 @@ export function PrivacyPolicyPage() {
       className="privacy-policy-page page-section page-section--surface"
       aria-label={t('privacyPolicy.ariaMain')}
     >
+      <SEO title={t('seo.privacyTitle')} description={t('seo.privacyDescription')} path="/privacy-policy" />
       <div className="page-bg-blobs" aria-hidden>
         <div className="page-bg-blob page-bg-blob--amber" />
         <div className="page-bg-blob page-bg-blob--coral" />

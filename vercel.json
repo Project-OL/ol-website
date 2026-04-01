@@ -1,0 +1,11 @@
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.offoolive.com" }],
+      "destination": "https://offoolive.com/:path*",
+      "permanent": true
+    }
+  ]
+}

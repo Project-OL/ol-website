@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n/useI18n.js'
 import { HeroHeader } from '../components/home/HeroHeader'
+import { SEO } from '../components/SEO.jsx'
 import './CooperationPage.css'
 
 const AGENT_STEPS = [1, 2, 3, 4, 5]
@@ -15,6 +16,11 @@ export function CooperationPage() {
       className="cooperation-page page-section page-section--surface"
       aria-label={t('cooperation.ariaMain')}
     >
+      <SEO
+        title={t('seo.cooperationTitle')}
+        description={t('seo.cooperationDescription')}
+        path="/cooperation"
+      />
       <div className="page-bg-blobs" aria-hidden>
         <div className="page-bg-blob page-bg-blob--amber" />
         <div className="page-bg-blob page-bg-blob--coral" />
