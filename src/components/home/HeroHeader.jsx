@@ -26,6 +26,63 @@ function ChevronDown({ className }) {
   )
 }
 
+function HamburgerMenu({ isOpen, className }) {
+  return (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+    >
+      {isOpen ? (
+        <>
+          <path
+            d="M6 6L18 18"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      ) : (
+        <>
+          <path
+            d="M3 6H21"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3 12H21"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3 18H21"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      )}
+    </svg>
+  )
+}
+
 function LogoMark() {
   return (
     <div className="hero-header__logo-mark" aria-hidden>
@@ -63,13 +120,16 @@ function HeroHeader({ variant = 'hero' }) {
   const { locale, setLocale, t, languages } = useI18n()
   const [menuOpen, setMenuOpen] = useState(false)
   const [policiesOpen, setPoliciesOpen] = useState(false)
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const wrapRef = useRef(null)
   const policiesRef = useRef(null)
+  const hamburgerRef = useRef(null)
+  const navRef = useRef(null)
 
   const currentLabel = languages.find((l) => l.code === locale)?.label ?? t('header.currentLanguageFallback')
 
   useEffect(() => {
-    if (!menuOpen && !policiesOpen) return
+    if (!menuOpen && !policiesOpen && !mobileNavOpen) return
     const onDoc = (e) => {
       if (wrapRef.current && !wrapRef.current.contains(e.target)) {
         setMenuOpen(false)
@@ -77,11 +137,21 @@ function HeroHeader({ variant = 'hero' }) {
       if (policiesRef.current && !policiesRef.current.contains(e.target)) {
         setPoliciesOpen(false)
       }
+      if (
+        mobileNavOpen &&
+        navRef.current &&
+        !navRef.current.contains(e.target) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(e.target)
+      ) {
+        setMobileNavOpen(false)
+      }
     }
     const onKey = (e) => {
       if (e.key === 'Escape') {
         setMenuOpen(false)
         setPoliciesOpen(false)
+        setMobileNavOpen(false)
       }
     }
     document.addEventListener('mousedown', onDoc)
@@ -90,19 +160,49 @@ function HeroHeader({ variant = 'hero' }) {
       document.removeEventListener('mousedown', onDoc)
       document.removeEventListener('keydown', onKey)
     }
-  }, [menuOpen, policiesOpen])
+  }, [menuOpen, policiesOpen, mobileNavOpen])
+
+  useEffect(() => {
+    document.body.style.overflow = mobileNavOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileNavOpen])
 
   const headerClass =
-    variant === 'surface' ? 'hero-header hero-header--surface' : 'hero-header'
+    variant === 'surface'
+      ? 'hero-header hero-header--surface'
+      : 'hero-header'
 
   return (
-    <header className={headerClass}>
+    <header className={`${headerClass}${mobileNavOpen ? ' is-nav-open' : ''}`}>
       <Link to="/" className="hero-header__brand">
         <LogoMark />
         <span className="hero-header__brand-text">{t('brand.name')}</span>
       </Link>
 
-      <nav className="hero-header__nav" aria-label={t('header.primaryNavAria')}>
+      <button
+        type="button"
+        ref={hamburgerRef}
+        className="hero-header__hamburger"
+        aria-label={t('header.menuButtonAria')}
+        aria-expanded={mobileNavOpen}
+        aria-controls="hero-header-mobile-nav"
+        onClick={() => {
+          setMobileNavOpen((open) => !open)
+          setMenuOpen(false)
+          setPoliciesOpen(false)
+        }}
+      >
+        <HamburgerMenu isOpen={mobileNavOpen} className="hero-header__hamburger-icon" />
+      </button>
+
+      <nav
+        ref={navRef}
+        id="hero-header-mobile-nav"
+        className={`hero-header__nav${mobileNavOpen ? ' is-mobile-open' : ''}`}
+        aria-label={t('header.primaryNavAria')}
+      >
         <ul>
           {NAV_LINKS.map((item) => {
             const label = t(`nav.${item.navKey}`)
@@ -113,7 +213,11 @@ function HeroHeader({ variant = 'hero' }) {
                   : pathname === item.to
               return (
                 <li key={item.id}>
-                  <Link to={item.to} className={active ? 'is-active' : undefined}>
+                  <Link
+                    to={item.to}
+                    className={active ? 'is-active' : undefined}
+                    onClick={() => setMobileNavOpen(false)}
+                  >
                     {label}
                   </Link>
                 </li>
@@ -121,7 +225,9 @@ function HeroHeader({ variant = 'hero' }) {
             }
             return (
               <li key={item.id}>
-                <a href={item.href}>{label}</a>
+                <a href={item.href} onClick={() => setMobileNavOpen(false)}>
+                  {label}
+                </a>
               </li>
             )
           })}
@@ -153,7 +259,10 @@ function HeroHeader({ variant = 'hero' }) {
                       <Link
                         to={to}
                         className="hero-header__policies-link"
-                        onClick={() => setPoliciesOpen(false)}
+                        onClick={() => {
+                          setPoliciesOpen(false)
+                          setMobileNavOpen(false)
+                        }}
                       >
                         {t(msgKey)}
                       </Link>
@@ -161,7 +270,10 @@ function HeroHeader({ variant = 'hero' }) {
                       <a
                         href={href}
                         className="hero-header__policies-link"
-                        onClick={() => setPoliciesOpen(false)}
+                        onClick={() => {
+                          setPoliciesOpen(false)
+                          setMobileNavOpen(false)
+                        }}
                       >
                         {t(msgKey)}
                       </a>

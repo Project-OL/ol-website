@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useI18n } from '../../i18n/useI18n.js'
+import { handleComingSoonClick } from '../../utils/showComingSoon.js'
 import './SiteFooter.css'
 
 function IconAppleSmall() {
@@ -55,6 +56,7 @@ function IconInstagram() {
 
 export function SiteFooter() {
   const { t } = useI18n()
+  const onStoreClick = handleComingSoonClick(t('common.comingSoon'))
   return (
     <footer
       className="page-section page-section--surface site-footer"
@@ -76,15 +78,15 @@ export function SiteFooter() {
           <p className="site-footer__download-label">{t('footer.downloadApp')}</p>
 
           <div className="site-footer__stores">
-            <a className="site-footer__store site-footer__store--apple" href="#" aria-label={t('footer.ariaAppStore')}>
+            <a className="site-footer__store site-footer__store--apple" href="#" onClick={onStoreClick} aria-label={t('footer.ariaAppStore')}>
               <IconAppleSmall />
               <span>{t('footer.storeAppStore')}</span>
             </a>
-            <a className="site-footer__store site-footer__store--google" href="#" aria-label={t('footer.ariaGooglePlay')}>
+            <a className="site-footer__store site-footer__store--google" href="#" onClick={onStoreClick} aria-label={t('footer.ariaGooglePlay')}>
               <IconPlaySmall />
               <span>{t('footer.storeGooglePlay')}</span>
             </a>
-            <a className="site-footer__store site-footer__store--android" href="#" aria-label={t('footer.ariaAndroid')}>
+            <a className="site-footer__store site-footer__store--android" href="#" onClick={onStoreClick} aria-label={t('footer.ariaAndroid')}>
               <IconPhoneSmall />
               <span>{t('footer.storeAndroid')}</span>
             </a>
@@ -123,7 +125,7 @@ export function SiteFooter() {
         </nav>
 
         <nav className="site-footer__col site-footer__col--help" aria-label={t('footer.navHelp')}>
-          <h3 className="site-footer__col-title site-footer__col-title--help">{t('footer.navHelp')}</h3>
+          <h3 className="site-footer__col-title">{t('footer.navHelp')}</h3>
           <ul className="site-footer__links">
             <li>
               <Link className="site-footer__link" to="/contact">
@@ -167,7 +169,7 @@ export function SiteFooter() {
           </span>
           <a
             className="site-footer__email"
-            href="mailto:offoolive@gmail.com"
+            href="mailto:support@offoolive.com"
             aria-label={t('footer.legalContactEmailAria')}
           >
             {t('footer.legalContactEmail')}

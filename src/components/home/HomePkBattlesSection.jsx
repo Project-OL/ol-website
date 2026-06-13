@@ -28,6 +28,7 @@ export function HomePkBattlesSection() {
             height={397}
             loading="lazy"
             decoding="async"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 611px"
           />
         </figure>
 

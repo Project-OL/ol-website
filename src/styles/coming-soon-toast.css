@@ -1,0 +1,30 @@
+.coming-soon-toast {
+  position: fixed;
+  left: 50%;
+  bottom: clamp(24px, 5vh, 48px);
+  z-index: 9999;
+  transform: translate(-50%, 12px);
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: rgba(15, 15, 18, 0.92);
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.coming-soon-toast--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}

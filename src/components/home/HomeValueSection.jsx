@@ -1,4 +1,5 @@
 import { useI18n } from '../../i18n/useI18n.js'
+import { handleComingSoonClick } from '../../utils/showComingSoon.js'
 import './HomeValueSection.css'
 
 function IconApple() {
@@ -33,6 +34,7 @@ function IconPhone() {
 
 export function HomeValueSection() {
   const { t } = useI18n()
+  const onStoreClick = handleComingSoonClick(t('common.comingSoon'))
   return (
       <section
         className="page-section page-section--surface home-value-section"
@@ -49,15 +51,15 @@ export function HomeValueSection() {
           </header>
 
           <div className="home-value-section__stores">
-            <a className="store-btn store-btn--app-store" href="#" aria-label={t('value.ariaAppStore')}>
+            <a className="store-btn store-btn--app-store" href="#" onClick={onStoreClick} aria-label={t('value.ariaAppStore')}>
               <IconApple />
               <span className="store-btn__label">{t('value.storeAppStore')}</span>
             </a>
-            <a className="store-btn store-btn--google-play" href="#" aria-label={t('value.ariaGooglePlay')}>
+            <a className="store-btn store-btn--google-play" href="#" onClick={onStoreClick} aria-label={t('value.ariaGooglePlay')}>
               <IconPlay />
               <span className="store-btn__label">{t('value.storeGooglePlay')}</span>
             </a>
-            <a className="store-btn store-btn--android" href="#" aria-label={t('value.ariaAndroid')}>
+            <a className="store-btn store-btn--android" href="#" onClick={onStoreClick} aria-label={t('value.ariaAndroid')}>
               <IconPhone />
               <span className="store-btn__label">{t('value.storeAndroid')}</span>
             </a>

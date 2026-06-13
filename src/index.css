@@ -17,6 +17,10 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
+  /* Standardized responsive edge spacing for all components */
+  --gutter-x: clamp(20px, 5.28vw, 76px);
+  --gutter-y: clamp(48px, 8vh, 96px);
+
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -48,8 +52,32 @@
   }
 }
 
+@media (max-width: 640px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
 }
 
 #root {
@@ -75,6 +103,8 @@ h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 h1 {
@@ -97,6 +127,7 @@ h2 {
 }
 p {
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 code {

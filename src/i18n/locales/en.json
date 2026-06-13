@@ -2,6 +2,9 @@
   "brand": {
     "name": "Offoo LIVE"
   },
+  "common": {
+    "comingSoon": "Coming soon"
+  },
   "nav": {
     "homepage": "Homepage",
     "contactUs": "Contact Us",
@@ -14,6 +17,7 @@
     "langButtonAria": "Choose language",
     "langMenuAria": "Available languages",
     "policiesMenuAria": "Policies and legal documents",
+    "menuButtonAria": "Open navigation menu",
     "currentLanguageFallback": "Language"
   },
   "hero": {
@@ -87,9 +91,9 @@
     "linkBusiness": "Business Cooperation",
     "ariaFacebook": "Offoo Live on Facebook",
     "ariaInstagram": "Offoo Live on Instagram",
-    "copyright": "© 2026 Offoo Live. All rights reserved.",
-    "legalContactEmail": "offoolive@gmail.com",
-    "legalContactEmailAria": "Email Offoo Live at offoolive@gmail.com"
+    "copyright": "© 2026 Jinyu Technologies Pvt Ltd. All rights reserved.",
+    "legalContactEmail": "support@offoolive.com",
+    "legalContactEmailAria": "Email Offoo Live at support@offoolive.com"
   },
   "seo": {
     "homeTitle": "Offoolive | Live Social Streaming & Real-Time Connection",

@@ -46,6 +46,7 @@ export function ChildSafetyPolicyPage() {
                 height={480}
                 loading="lazy"
                 decoding="async"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 45vw, (max-width: 1024px) 50vw, 52vw"
                 className="child-safety-policy-page__illustration"
               />
             </div>

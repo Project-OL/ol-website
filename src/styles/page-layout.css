@@ -62,6 +62,11 @@
 }
 
 @media (max-width: 900px) {
+  .page-section {
+    min-height: auto;
+    max-height: none;
+  }
+
   .page-bg-blob--amber {
     width: min(280px, 55vw);
     height: min(280px, 55vw);

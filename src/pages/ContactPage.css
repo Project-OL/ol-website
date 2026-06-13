@@ -60,9 +60,9 @@
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 64px;
-  line-height: 70px;
-  letter-spacing: -1.6px;
+  font-size: clamp(34px, 8vw, 64px);
+  line-height: 1.1;
+  letter-spacing: normal;
   color: #1b181c;
 }
 
@@ -73,7 +73,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: clamp(17px, 1.5vw, 20px);
-  line-height: 36px;
+  line-height: 1.65;
   color: #1b181c;
 }
 
@@ -100,12 +100,13 @@
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 400;
-  font-size:30px;
-  line-height:70px;
-  letter-spacing: -1.6px;
+  font-size: clamp(20px, 5.5vw, 30px);
+  line-height: 1.25;
+  letter-spacing: normal;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+  white-space: normal;
   transition: background 0.15s ease, transform 0.15s ease;
 }
 
@@ -173,8 +174,8 @@
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.7;
   color: #1b181c;
 }
 
@@ -206,7 +207,7 @@
   margin: 0 0;
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-size: clamp(17px, 1.5vw, 20px);
-  line-height: 36px;
+  line-height: 1.7;
   color: #1b181c;
 }
 
@@ -218,7 +219,7 @@
 .contact-page__email {
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-size: clamp(17px, 1.5vw, 20px);
-  line-height: 36px;
+  line-height: 1.7;
   color: #1b181c;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -235,4 +236,362 @@
 #assistance,
 #partner {
   scroll-margin-top: 88px;
+}
+
+@media (max-width: 1024px) {
+  .contact-page__canvas {
+    padding: 0 clamp(18px, 4vw, 56px) clamp(40px, 6vh, 80px);
+  }
+
+  .contact-page__title {
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+
+  .contact-page__lede {
+    font-size: clamp(16px, 1.8vw, 19px);
+    line-height: 1.6;
+    margin: clamp(24px, 3vh, 32px) auto 0;
+  }
+
+  .contact-page__btn {
+    min-height: 80px;
+    font-size: clamp(18px, 4vw, 26px);
+  }
+
+  .contact-page__section-title {
+    font-size: clamp(24px, 2vw, 28px);
+    line-height: 1.3;
+  }
+
+  .contact-page__section-title-contact {
+    font-size: clamp(20px, 1.8vw, 22px);
+    line-height: 1.35;
+  }
+
+  .contact-page__prose p,
+  .contact-page__body,
+  .contact-page__step-body p,
+  .contact-page__email {
+    font-size: clamp(16px, 1.8vw, 18px);
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page__canvas {
+    padding: 0 clamp(14px, 3.5vw, 28px) clamp(32px, 5vh, 48px);
+  }
+
+  .contact-page__hero {
+    padding-top: clamp(20px, 4vh, 40px);
+    padding-bottom: clamp(12px, 2vh, 20px);
+  }
+
+  .contact-page__title {
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+  }
+
+  .contact-page__lede {
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.55;
+    margin: clamp(20px, 2.5vh, 28px) auto 0;
+  }
+
+  .contact-page__actions {
+    gap: clamp(12px, 2vw, 20px);
+    margin-top: clamp(20px, 3vh, 32px);
+  }
+
+  .contact-page__btn {
+    min-height: 70px;
+    font-size: clamp(16px, 3vw, 22px);
+  }
+
+  .contact-page__section {
+    padding-top: clamp(28px, 4vh, 48px);
+  }
+
+  .contact-page__section-title {
+    font-size: clamp(22px, 3vw, 26px);
+    line-height: 1.35;
+    margin-bottom: clamp(16px, 2vh, 20px);
+  }
+
+  .contact-page__section-title-contact {
+    font-size: clamp(18px, 2.5vw, 20px);
+    line-height: 1.35;
+  }
+
+  .contact-page__prose p,
+  .contact-page__body,
+  .contact-page__step-body p,
+  .contact-page__email {
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.55;
+  }
+
+  .contact-page__step {
+    gap: clamp(10px, 1.5vw, 16px);
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-page__canvas {
+    padding: 0 clamp(12px, 3vw, 20px) clamp(24px, 4vh, 36px);
+  }
+
+  .contact-page__hero {
+    padding-top: clamp(16px, 3vh, 28px);
+    padding-bottom: clamp(10px, 1.5vh, 16px);
+  }
+
+  .contact-page__title {
+    font-size: clamp(24px, 3.8vw, 32px);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  .contact-page__lede {
+    font-size: clamp(14px, 1.5vw, 16px);
+    line-height: 1.5;
+    margin: clamp(16px, 2vh, 22px) auto 0;
+  }
+
+  .contact-page__actions {
+    gap: clamp(10px, 1.5vw, 14px);
+    margin-top: clamp(16px, 2.5vh, 22px);
+  }
+
+  .contact-page__btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 60px;
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: clamp(15px, 2vw, 18px);
+  }
+
+  .contact-page__section {
+    padding-top: clamp(20px, 3vh, 32px);
+  }
+
+  .contact-page__section-title {
+    font-size: clamp(18px, 2.8vw, 22px);
+    line-height: 1.25;
+    margin-bottom: clamp(12px, 1.5vh, 16px);
+  }
+
+  .contact-page__section-title-contact {
+    font-size: clamp(16px, 2.2vw, 18px);
+    line-height: 1.35;
+  }
+
+  .contact-page__prose p,
+  .contact-page__body,
+  .contact-page__step-body p,
+  .contact-page__email {
+    font-size: clamp(13px, 1.3vw, 15px);
+    line-height: 1.45;
+  }
+
+  .contact-page__step {
+    grid-template-columns: 1fr;
+    gap: clamp(8px, 1.2vh, 12px);
+  }
+
+  #assistance,
+  #partner {
+    scroll-margin-top: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page__canvas {
+    padding: 0 clamp(10px, 2.5vw, 16px) clamp(20px, 3vh, 28px);
+  }
+
+  .contact-page__hero {
+    padding-top: clamp(12px, 2vh, 20px);
+    padding-bottom: clamp(8px, 1vh, 12px);
+  }
+
+  .contact-page__title {
+    font-size: clamp(20px, 3.5vw, 28px);
+    line-height: 1.1;
+    letter-spacing: -0.3px;
+  }
+
+  .contact-page__lede {
+    font-size: clamp(13px, 1.3vw, 14px);
+    line-height: 1.45;
+    margin: clamp(12px, 1.5vh, 18px) auto 0;
+  }
+
+  .contact-page__actions {
+    gap: clamp(8px, 1.2vh, 12px);
+    margin-top: clamp(12px, 2vh, 18px);
+  }
+
+  .contact-page__btn {
+    min-height: 52px;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: clamp(13px, 1.5vw, 15px);
+  }
+
+  .contact-page__section {
+    padding-top: clamp(16px, 2.5vh, 24px);
+  }
+
+  .contact-page__section-title {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.2;
+    margin-bottom: clamp(10px, 1.2vh, 14px);
+  }
+
+  .contact-page__section-title-contact {
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.3;
+  }
+
+  .contact-page__prose p,
+  .contact-page__body,
+  .contact-page__step-body p,
+  .contact-page__email {
+    font-size: clamp(12px, 1.2vw, 13px);
+    line-height: 1.4;
+  }
+
+  #assistance,
+  #partner {
+    scroll-margin-top: 52px;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-page__canvas {
+    padding: 0 8px clamp(16px, 2.5vh, 24px);
+  }
+
+  .contact-page__hero {
+    padding-top: clamp(10px, 1.5vh, 16px);
+    padding-bottom: clamp(6px, 0.8vh, 10px);
+  }
+
+  .contact-page__title {
+    font-size: clamp(18px, 3vw, 24px);
+    line-height: 1.1;
+  }
+
+  .contact-page__lede {
+    font-size: clamp(12px, 1.2vw, 13px);
+    line-height: 1.4;
+    margin: clamp(10px, 1.2vh, 14px) auto 0;
+  }
+
+  .contact-page__actions {
+    gap: clamp(6px, 1vh, 10px);
+    margin-top: clamp(10px, 1.5vh, 14px);
+  }
+
+  .contact-page__btn {
+    min-height: 48px;
+    padding: 8px 12px;
+    border-radius: 14px;
+    font-size: clamp(12px, 1.3vw, 13px);
+  }
+
+  .contact-page__section {
+    padding-top: clamp(12px, 2vh, 20px);
+  }
+
+  .contact-page__section-title {
+    font-size: clamp(15px, 2.2vw, 18px);
+    line-height: 1.2;
+    margin-bottom: clamp(8px, 1vh, 12px);
+  }
+
+  .contact-page__section-title-contact {
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: 1.3;
+  }
+
+  .contact-page__prose p,
+  .contact-page__body,
+  .contact-page__step-body p,
+  .contact-page__email {
+    font-size: clamp(11px, 1.1vw, 12px);
+    line-height: 1.35;
+  }
+
+  #assistance,
+  #partner {
+    scroll-margin-top: 48px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-page__canvas {
+    padding: 0 6px clamp(12px, 2vh, 20px);
+  }
+
+  .contact-page__hero {
+    padding-top: clamp(8px, 1.2vh, 14px);
+    padding-bottom: clamp(5px, 0.6vh, 8px);
+  }
+
+  .contact-page__title {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.1;
+  }
+
+  .contact-page__lede {
+    font-size: clamp(11px, 1vw, 12px);
+    line-height: 1.35;
+    margin: clamp(8px, 1vh, 12px) auto 0;
+  }
+
+  .contact-page__actions {
+    gap: clamp(4px, 0.8vh, 8px);
+    margin-top: clamp(8px, 1.2vh, 12px);
+  }
+
+  .contact-page__btn {
+    min-height: 44px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: clamp(11px, 1.1vw, 12px);
+  }
+
+  .contact-page__section {
+    padding-top: clamp(10px, 1.5vh, 16px);
+  }
+
+  .contact-page__section-title {
+    font-size: clamp(13px, 2vw, 16px);
+    line-height: 1.15;
+    margin-bottom: clamp(6px, 0.8vh, 10px);
+  }
+
+  .contact-page__section-title-contact {
+    font-size: clamp(12px, 1.5vw, 13px);
+    line-height: 1.25;
+  }
+
+  .contact-page__prose p,
+  .contact-page__body,
+  .contact-page__step-body p,
+  .contact-page__email {
+    font-size: clamp(10px, 1vw, 11px);
+    line-height: 1.3;
+  }
+
+  #assistance,
+  #partner {
+    scroll-margin-top: 44px;
+  }
 }

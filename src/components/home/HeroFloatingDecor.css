@@ -1,0 +1,73 @@
+.hero-floating {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-floating__sheet,
+.hero-floating__crop-img {
+  display: block;
+  pointer-events: none;
+}
+
+.hero-floating__sheet {
+  filter: drop-shadow(0 2px 5px rgba(23, 26, 31, 0.09))
+    drop-shadow(0 0 2px rgba(23, 26, 31, 0.12));
+}
+
+/* Desktop — single composite sheet at Figma coords (416,144 · 692×255 @ 1440×1024) */
+.hero-floating__sheet {
+  position: absolute;
+  left: calc(416 / var(--hero-w, 1440) * 100%);
+  top: calc(144 / var(--hero-h, 1024) * 100%);
+  width: calc(692 / var(--hero-w, 1440) * 100%);
+  height: auto;
+  aspect-ratio: 692 / 255;
+}
+
+.hero-floating__spread {
+  display: none;
+}
+
+.hero-floating__crop {
+  position: absolute;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  box-sizing: border-box;
+  filter: drop-shadow(0 1px 2px rgba(23, 26, 31, 0.12));
+}
+
+.hero-floating__crop-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(692 / var(--crop-w) * 100%);
+  height: auto;
+  max-width: none;
+  transform: translate(
+    calc(var(--offset-x) / 692 * -100%),
+    calc(var(--offset-y) / 255 * -100%)
+  );
+}
+
+@media (max-width: 904px) {
+  .hero-floating__sheet {
+    display: none;
+  }
+
+  .hero-floating__spread {
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+
+  /* Figma hero coords — like upper-left, heart upper-right, star lower-center-right */
+  .hero-floating__crop {
+    left: calc(var(--hero-item-left) / var(--hero-w, 1440) * 100%);
+    top: calc(var(--hero-item-top) / var(--hero-h, 1024) * 100%);
+  }
+}

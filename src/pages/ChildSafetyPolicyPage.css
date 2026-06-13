@@ -172,19 +172,289 @@ ul.child-safety-policy-page__list {
   opacity: 0.85;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
+  .child-safety-policy-page__canvas {
+    padding: 0 clamp(18px, 4vw, 56px) clamp(40px, 6vh, 80px);
+  }
+
   .child-safety-policy-page__title {
+    font-size: clamp(28px, 4vw, 48px);
     letter-spacing: -0.8px;
+  }
+
+  .child-safety-policy-page__subtitle {
+    font-size: clamp(16px, 1.5vw, 20px);
+  }
+
+  .child-safety-policy-page__tagline {
+    font-size: clamp(14px, 1.3vw, 18px);
+  }
+
+  .child-safety-policy-page__illustration {
+    width: min(600px, 50vw);
+    max-height: min(420px, 35vh);
+  }
+
+  .child-safety-policy-page__h2 {
+    font-size: clamp(22px, 2vw, 28px);
+    line-height: 1.35;
   }
 
   .child-safety-policy-page__p,
   .child-safety-policy-page__list,
   .child-safety-policy-page__label {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: clamp(18px, 2.2vw, 22px);
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .child-safety-policy-page__canvas {
+    padding: 0 clamp(14px, 3.5vw, 28px) clamp(32px, 5vh, 48px);
+  }
+
+  .child-safety-policy-page__hero {
+    padding-top: clamp(20px, 4vh, 40px);
+    padding-bottom: clamp(12px, 2vh, 20px);
+  }
+
+  .child-safety-policy-page__title {
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+  }
+
+  .child-safety-policy-page__subtitle {
+    font-size: clamp(14px, 1.8vw, 18px);
+    margin: clamp(8px, 1.2vh, 12px) auto 0;
+  }
+
+  .child-safety-policy-page__tagline {
+    font-size: clamp(13px, 1.3vw, 16px);
+    margin: clamp(6px, 1vh, 10px) auto 0;
+  }
+
+  .child-safety-policy-page__illustration {
+    width: min(500px, 45vw);
+    max-height: min(360px, 30vh);
   }
 
   .child-safety-policy-page__h2 {
-    font-size: 22px;
+    font-size: clamp(20px, 3.5vw, 26px);
+    margin: clamp(20px, 3vh, 32px) 0 clamp(8px, 1.5vh, 12px);
+    line-height: 1.35;
+  }
+
+  .child-safety-policy-page__p,
+  .child-safety-policy-page__list,
+  .child-safety-policy-page__label {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.55;
+    margin-bottom: clamp(12px, 1.5vh, 16px);
+  }
+
+  .child-safety-policy-page__list li {
+    margin-bottom: clamp(6px, 1vh, 10px);
+  }
+
+  .child-safety-policy-page__label {
+    margin: clamp(12px, 1.5vh, 16px) 0 clamp(6px, 0.8vh, 10px);
+  }
+}
+
+@media (max-width: 640px) {
+  .child-safety-policy-page__canvas {
+    padding: 0 clamp(12px, 3vw, 20px) clamp(24px, 4vh, 36px);
+  }
+
+  .child-safety-policy-page__hero {
+    padding-top: clamp(16px, 3vh, 28px);
+    padding-bottom: clamp(10px, 1.5vh, 16px);
+  }
+
+  .child-safety-policy-page__title {
+    font-size: clamp(22px, 3.8vw, 30px);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  .child-safety-policy-page__subtitle {
+    font-size: clamp(13px, 1.5vw, 16px);
+    margin: clamp(6px, 1vh, 10px) auto 0;
+  }
+
+  .child-safety-policy-page__tagline {
+    font-size: clamp(12px, 1.3vw, 14px);
+    margin: clamp(5px, 0.8vh, 8px) auto 0;
+  }
+
+  .child-safety-policy-page__illustration {
+    width: min(100%, 360px);
+    max-height: none;
+  }
+
+  .child-safety-policy-page__h2 {
+    font-size: clamp(18px, 3vw, 22px);
+    margin: clamp(16px, 2.5vh, 24px) 0 clamp(8px, 1.25vh, 12px);
+  }
+
+  .child-safety-policy-page__p,
+  .child-safety-policy-page__list,
+  .child-safety-policy-page__label {
+    font-size: clamp(15px, 1.8vw, 17px);
+    line-height: 1.55;
+    margin-bottom: clamp(10px, 1.5vh, 14px);
+  }
+
+  .child-safety-policy-page__list li {
+    margin-bottom: clamp(5px, 0.8vh, 8px);
+  }
+
+  .child-safety-policy-page__label {
+    margin: clamp(12px, 1.5vh, 16px) 0 clamp(6px, 1vh, 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .child-safety-policy-page__canvas {
+    padding: 0 clamp(10px, 2.5vw, 16px) clamp(20px, 3vh, 28px);
+  }
+
+  .child-safety-policy-page__hero {
+    padding-top: clamp(12px, 2vh, 20px);
+    padding-bottom: clamp(8px, 1vh, 12px);
+  }
+
+  .child-safety-policy-page__title {
+    font-size: clamp(18px, 3.2vw, 26px);
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+
+  .child-safety-policy-page__subtitle {
+    font-size: clamp(12px, 1.3vw, 14px);
+    margin: clamp(5px, 0.8vh, 8px) auto 0;
+  }
+
+  .child-safety-policy-page__tagline {
+    font-size: clamp(11px, 1.1vw, 12px);
+    margin: clamp(4px, 0.6vh, 6px) auto 0;
+  }
+
+  .child-safety-policy-page__illustration {
+    width: min(100%, 320px);
+  }
+
+  .child-safety-policy-page__h2 {
+    font-size: clamp(16px, 2.5vw, 20px);
+    margin: clamp(12px, 2vh, 18px) 0 clamp(6px, 1vh, 10px);
+  }
+
+  .child-safety-policy-page__p,
+  .child-safety-policy-page__list,
+  .child-safety-policy-page__label {
+    font-size: clamp(14px, 1.5vw, 15px);
+    line-height: 1.5;
+    margin-bottom: clamp(8px, 1.2vh, 12px);
+  }
+
+  .child-safety-policy-page__list li {
+    margin-bottom: clamp(4px, 0.6vh, 6px);
+  }
+
+  .child-safety-policy-page__label {
+    margin: clamp(10px, 1.5vh, 14px) 0 clamp(5px, 0.8vh, 8px);
+  }
+}
+
+@media (max-width: 380px) {
+  .child-safety-policy-page__canvas {
+    padding: 0 8px clamp(16px, 2.5vh, 24px);
+  }
+
+  .child-safety-policy-page__title {
+    font-size: clamp(16px, 2.8vw, 22px);
+    line-height: 1.2;
+  }
+
+  .child-safety-policy-page__subtitle {
+    font-size: clamp(11px, 1.2vw, 13px);
+    margin: clamp(4px, 0.6vh, 6px) auto 0;
+  }
+
+  .child-safety-policy-page__tagline {
+    font-size: clamp(10px, 0.9vw, 11px);
+    margin: clamp(3px, 0.5vh, 4px) auto 0;
+  }
+
+  .child-safety-policy-page__illustration {
+    width: min(100%, 280px);
+  }
+
+  .child-safety-policy-page__h2 {
+    font-size: clamp(15px, 2.2vw, 18px);
+    margin: clamp(10px, 1.5vh, 14px) 0 clamp(5px, 0.8vh, 8px);
+  }
+
+  .child-safety-policy-page__p,
+  .child-safety-policy-page__list,
+  .child-safety-policy-page__label {
+    font-size: clamp(13px, 1.5vw, 14px);
+    line-height: 1.45;
+    margin-bottom: clamp(6px, 1vh, 10px);
+  }
+
+  .child-safety-policy-page__list li {
+    margin-bottom: clamp(3px, 0.5vh, 5px);
+  }
+
+  .child-safety-policy-page__label {
+    margin: clamp(8px, 1.2vh, 12px) 0 clamp(4px, 0.6vh, 6px);
+  }
+}
+
+@media (max-width: 320px) {
+  .child-safety-policy-page__canvas {
+    padding: 0 6px clamp(12px, 2vh, 20px);
+  }
+
+  .child-safety-policy-page__title {
+    font-size: clamp(14px, 2.5vw, 18px);
+    line-height: 1.15;
+  }
+
+  .child-safety-policy-page__subtitle {
+    font-size: clamp(10px, 1vw, 12px);
+    margin: clamp(3px, 0.5vh, 4px) auto 0;
+  }
+
+  .child-safety-policy-page__tagline {
+    font-size: clamp(9px, 0.8vw, 10px);
+    margin: clamp(2px, 0.4vh, 3px) auto 0;
+  }
+
+  .child-safety-policy-page__illustration {
+    width: min(100%, 250px);
+  }
+
+  .child-safety-policy-page__h2 {
+    font-size: clamp(13px, 2vw, 16px);
+    margin: clamp(8px, 1.2vh, 12px) 0 clamp(4px, 0.6vh, 6px);
+  }
+
+  .child-safety-policy-page__p,
+  .child-safety-policy-page__list,
+  .child-safety-policy-page__label {
+    font-size: clamp(12px, 1.3vw, 13px);
+    line-height: 1.4;
+    margin-bottom: clamp(5px, 0.8vh, 8px);
+  }
+
+  .child-safety-policy-page__list li {
+    margin-bottom: clamp(2px, 0.4vh, 4px);
+  }
+
+  .child-safety-policy-page__label {
+    margin: clamp(6px, 1vh, 10px) 0 clamp(3px, 0.5vh, 5px);
   }
 }
