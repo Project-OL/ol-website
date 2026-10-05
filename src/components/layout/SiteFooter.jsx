@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useI18n } from '../../i18n/useI18n.js'
-import { handleComingSoonClick } from '../../utils/showComingSoon.js'
+import { useStoreLinks } from '../../hooks/useStoreLinks.js'
 import './SiteFooter.css'
 
 function IconAppleSmall() {
@@ -56,7 +56,7 @@ function IconInstagram() {
 
 export function SiteFooter() {
   const { t } = useI18n()
-  const onStoreClick = handleComingSoonClick(t('common.comingSoon'))
+  const store = useStoreLinks(t('common.comingSoon'))
   return (
     <footer
       className="page-section page-section--surface site-footer"
@@ -78,15 +78,15 @@ export function SiteFooter() {
           <p className="site-footer__download-label">{t('footer.downloadApp')}</p>
 
           <div className="site-footer__stores">
-            <a className="site-footer__store site-footer__store--apple" href="#" onClick={onStoreClick} aria-label={t('footer.ariaAppStore')}>
+            <a className="site-footer__store site-footer__store--apple" {...store.appStore} aria-label={t('footer.ariaAppStore')}>
               <IconAppleSmall />
               <span>{t('footer.storeAppStore')}</span>
             </a>
-            <a className="site-footer__store site-footer__store--google" href="#" onClick={onStoreClick} aria-label={t('footer.ariaGooglePlay')}>
+            <a className="site-footer__store site-footer__store--google" {...store.googlePlay} aria-label={t('footer.ariaGooglePlay')}>
               <IconPlaySmall />
               <span>{t('footer.storeGooglePlay')}</span>
             </a>
-            <a className="site-footer__store site-footer__store--android" href="#" onClick={onStoreClick} aria-label={t('footer.ariaAndroid')}>
+            <a className="site-footer__store site-footer__store--android" {...store.android} aria-label={t('footer.ariaAndroid')}>
               <IconPhoneSmall />
               <span>{t('footer.storeAndroid')}</span>
             </a>
