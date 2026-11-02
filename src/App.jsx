@@ -24,6 +24,9 @@ const CoinRechargePolicyPage = lazy(() =>
 const ChildSafetyPolicyPage = lazy(() =>
   import('./pages/ChildSafetyPolicyPage.jsx').then((m) => ({ default: m.ChildSafetyPolicyPage })),
 )
+const LiveSharePage = lazy(() =>
+  import('./pages/LiveSharePage.jsx').then((m) => ({ default: m.LiveSharePage })),
+)
 
 function App() {
   return (
@@ -38,6 +41,7 @@ function App() {
           <Route path="/host-agreement" element={<HostAgreementPage />} />
           <Route path="/recharge-agreement" element={<CoinRechargePolicyPage />} />
           <Route path="/child-safety-policy" element={<ChildSafetyPolicyPage />} />
+          <Route path="/live/:streamId" element={<LiveSharePage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

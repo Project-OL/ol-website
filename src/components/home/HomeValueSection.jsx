@@ -2,7 +2,7 @@ import { useI18n } from '../../i18n/useI18n.js'
 import { useStoreLinks } from '../../hooks/useStoreLinks.js'
 import './HomeValueSection.css'
 
-function IconApple() {
+export function IconApple() {
   return (
     <svg className="store-btn__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden>
       <path
@@ -13,7 +13,7 @@ function IconApple() {
   )
 }
 
-function IconPlay() {
+export function IconPlay() {
   return (
     <svg className="store-btn__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden>
       <path fill="currentColor" d="M8 5v14l11-7z" />
@@ -21,7 +21,7 @@ function IconPlay() {
   )
 }
 
-function IconPhone() {
+export function IconPhone() {
   return (
     <svg className="store-btn__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden>
       <path

@@ -1,0 +1,95 @@
+/**
+ * Shared live link landing (/live/:streamId). Same shell as the Contact page:
+ * viewport-height section, page-layout blobs, inner column scrolls.
+ */
+
+.live-share-page.page-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.live-share-page .page-bg-blob--amber {
+  background: rgba(251, 191, 36, 0.25);
+}
+
+.live-share-page .page-bg-blob--coral {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.live-share-page__scroll {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.live-share-page__canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(32px, 10vh, 112px) 20px clamp(48px, 8vh, 96px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.live-share-page__title {
+  margin: 0;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: clamp(32px, 7vw, 56px);
+  line-height: 1.1;
+  color: #1b181c;
+}
+
+.live-share-page__lede {
+  margin: 24px 0 0;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.65;
+  color: #1b181c;
+}
+
+.live-share-page__open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+  min-width: 220px;
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.25);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.live-share-page__hint {
+  margin: 48px 0 16px;
+  font-size: 15px;
+  color: #52525b;
+}
+
+.live-share-page__stores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}

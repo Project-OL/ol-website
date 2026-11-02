@@ -1,10 +1,16 @@
 {
+  "headers": [
+    {
+      "source": "/.well-known/(assetlinks\\.json|apple-app-site-association)",
+      "headers": [{ "key": "Content-Type", "value": "application/json" }]
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/:path((?!\\.well-known/).*)",
       "has": [{ "type": "host", "value": "www.offoolive.com" }],
-      "destination": "https://offoolive.com/:path*",
+      "destination": "https://offoolive.com/:path",
       "permanent": true
     }
   ]

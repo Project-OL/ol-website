@@ -5,6 +5,15 @@
   "common": {
     "comingSoon": "Coming soon"
   },
+  "liveShare": {
+    "seoTitle": "Watch this live on Offoo LIVE",
+    "seoDescription": "Someone shared a live stream with you. Open it in the Offoo LIVE app.",
+    "title": "You're invited to a live stream",
+    "lede": "Open it in the Offoo LIVE app to watch, chat and send gifts.",
+    "openInApp": "Open in app",
+    "noApp": "Don't have the app yet? Get it free:",
+    "invalidLink": "This link looks incomplete. Get the app to find live streams."
+  },
   "nav": {
     "homepage": "Homepage",
     "contactUs": "Contact Us",

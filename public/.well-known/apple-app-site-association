@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["K62557DA3Q.com.offooLive"],
+        "components": [
+          { "/": "/live/*" }
+        ]
+      }
+    ]
+  }
+}

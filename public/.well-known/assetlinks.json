@@ -1,0 +1,15 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.offooLive",
+      "sha256_cert_fingerprints": [
+        "6B:B5:5C:1E:13:66:EC:7F:52:B1:80:64:D6:60:36:59:6F:F2:5D:7D:8B:64:33:DE:05:BA:4F:F3:91:86:2C:6A",
+        "0E:B1:2F:AC:8A:96:BB:33:18:1E:BB:0A:49:73:00:AD:0F:F9:38:CC:55:AE:CE:4F:7C:05:66:FA:24:D9:04:ED",
+        "62:80:F2:04:5F:EC:6B:D5:65:C0:81:5A:27:B6:77:73:CC:61:67:73:C8:98:DD:08:FF:C8:99:C5:EF:B3:01:20",
+        "82:65:C0:AE:FE:03:64:33:E7:E2:E3:41:F9:06:6A:AE:D9:DE:9D:07:DF:94:2C:E7:A7:84:D5:DA:6C:D9:AB:42"
+      ]
+    }
+  }
+]
